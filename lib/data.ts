@@ -247,10 +247,37 @@ export const certifications = {
   ],
 };
 
+export interface Project {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  techStack: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  badge?: string; // ex: "Em produção", "Beta"
+  color: string; // classe de cor Tailwind para o accent
+}
+
+export const projects: Project[] = [
+  {
+    id: "kedgo",
+    name: "KedGo!",
+    tagline: "Roteiro e Custos de Viagem com IA",
+    description:
+      "App web full-stack de planejamento de viagens inteligente. Gera roteiros personalizados com Gemini AI, controla custos por categoria com OCR de recibos, suporta múltiplos viajantes e funciona 100% offline. Inclui sistema de assinaturas (Stripe), referral, cupons promocionais e painel SuperAdmin.",
+    techStack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Drizzle ORM", "Gemini AI", "Stripe", "Vite"],
+    liveUrl: "https://kedgo.app",
+    badge: "Em produção",
+    color: "cyan",
+  },
+];
+
 export const navLinks = [
   { label: "Sobre", href: "#about" },
   { label: "Experiência", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Projetos", href: "#projects" },
   { label: "Formação", href: "#education" },
   { label: "Contato", href: "#contact" },
 ];
