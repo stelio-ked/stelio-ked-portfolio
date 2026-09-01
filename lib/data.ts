@@ -22,14 +22,25 @@ export const aboutText = {
   paragraphs: [
     "Profissional dinâmico e proativo com mais de 10 anos de experiência na área de dados, atuando em diversos segmentos, incluindo varejo e finanças.",
     "Histórico de sucesso na implementação de soluções de dados que geraram resultados tangíveis para as empresas, sendo apaixonado por buscar inovações que agreguem valor ao crescimento das empresas e pessoas.",
-    "Experiência consolidada em liderança de equipes de análise de dados e gerenciamento de projetos complexos, mantendo um perfil autodidata, determinado e disciplinado na busca por resultados e superação de metas."
+    "Experiência consolidada em liderança de equipes de análise de dados e gerenciamento de projetos complexos, mantendo um perfil autodidata, determinado e disciplinado na busca por resultados e superação de metas.",
   ],
   stats: [
     { value: "10+", label: "Anos de Experiência" },
     { value: "7+", label: "Empresas Impactadas" },
     { value: "25", label: "Certificações" },
   ],
-  tags: ["#analisededados", "#cienciadedados", "#bigdata", "#businessintelligence", "#datavisualization", "#gestãodepessoas", "#liderança", "#recrutamentoeseletração", "#desenvolvimentodeequipes", "#culturaorganizacional"],
+  tags: [
+    "#analisededados",
+    "#cienciadedados",
+    "#bigdata",
+    "#businessintelligence",
+    "#datavisualization",
+    "#gestãodepessoas",
+    "#liderança",
+    "#recrutamentoeseletração",
+    "#desenvolvimentodeequipes",
+    "#culturaorganizacional",
+  ],
   highlights: [
     {
       icon: "target",
@@ -57,7 +68,6 @@ export const aboutText = {
       text: "Promove a cultura de trabalho orientada por dados, fornecendo suporte estratégico a todas as equipes nas decisões corporativas.",
     },
   ],
-
 };
 
 export interface Experience {
