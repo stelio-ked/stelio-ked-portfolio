@@ -277,7 +277,7 @@ export const projects: Project[] = [
     description:
       "App web full-stack de planejamento de viagens inteligente. Gera roteiros personalizados com Gemini AI, controla custos por categoria com OCR de recibos, suporta múltiplos viajantes e funciona 100% offline. Inclui sistema de assinaturas (Stripe), referral, cupons promocionais e painel SuperAdmin.",
     techStack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Drizzle ORM", "Gemini AI", "Stripe", "Vite"],
-    liveUrl: "https://kedgo.app",
+    liveUrl: "https://kedgo.pro",
     badge: "Em produção",
     color: "cyan",
   },
