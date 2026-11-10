@@ -47,5 +47,6 @@ Manter a arquitetura atual (Next.js estático com conteúdo em `lib/data.ts`), q
 
 - [x] Correções 1 e 2 acima (aplicadas em 2026-11-10)
 - [x] Revisão de conteúdo e metadados (item 3, aplicada em 2026-11-10)
+- [x] Competências de IA e .NET listadas de forma genérica, sem clientes (confirmado pelo dono em 2026-11-10)
 - [ ] Definir onde o site será hospedado
 - [ ] Manter e-mail e WhatsApp públicos
