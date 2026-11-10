@@ -1,0 +1,16 @@
+# Onde um agente pode CRIAR arquivos .md (um padrão glob por linha, relativo à raiz).
+# Usado pelo hook guard_md_location.py e pelo check_md_locations.py do pipeline.
+README.md
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+CHANGELOG.md
+PRODUCT_FEATURES.md
+TECH_ASSESSMENT.md
+.ai-agent/**
+.claude/**
+**/docs/**
+
+# Monorepo: descomente se quiser manter README em cada app/pacote
+# apps/*/README.md
+# packages/*/README.md

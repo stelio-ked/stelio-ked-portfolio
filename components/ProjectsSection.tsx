@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Rocket } from "lucide-react";
-import { projects } from "@/lib/data";
+import { projects, sectionTexts } from "@/lib/data";
 
 function GithubIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
   return (
@@ -108,10 +108,10 @@ export default function ProjectsSection() {
             Projetos
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
-            Projetos em Destaque
+            {sectionTexts.projects.title}
           </h2>
           <p className="text-[#7a7a9e] mt-3 text-lg">
-            Aplicações reais desenvolvidas de ponta a ponta com foco em IA, usabilidade e arquitetura escalável
+            {sectionTexts.projects.subtitle}
           </p>
         </motion.div>
 
@@ -144,7 +144,7 @@ export default function ProjectsSection() {
                       <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#a5b4fc]">
                         <Rocket size={16} className={colors.accent} />
                         <span style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
-                          SaaS & Web App
+                          {project.category}
                         </span>
                       </div>
 

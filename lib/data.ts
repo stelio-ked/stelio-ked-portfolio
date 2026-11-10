@@ -7,8 +7,8 @@ export const personalInfo = {
   name: "Stelio Ked",
   greeting: "Olá, eu sou",
   title: "Coordenador de Analytics",
-  subtitle: "Data & Analytics Leader",
-  tagline: "+10 anos transformando dados em decisões estratégicas",
+  subtitle: "Analytics & Applied AI Leader",
+  tagline: "+10 anos transformando dados em decisões estratégicas, agora com IA aplicada",
   location: "Palhoça, SC — Brasil",
   email: "theoked25@gmail.com",
   whatsapp: "5548988076962", // Number without +, spaces or dashes for API link
@@ -17,27 +17,37 @@ export const personalInfo = {
   avatarUrl: "/images/avatar-final.webp",
 };
 
+export const certifications = {
+  total: 25,
+  featured: [
+    { name: "Inteligência Artificial 2ª Edição", issuer: "Alura", year: "2024" },
+  ],
+};
+
 export const aboutText = {
   headline: "Sobre mim",
   paragraphs: [
     "Profissional dinâmico e proativo com mais de 10 anos de experiência na área de dados, atuando em diversos segmentos, incluindo varejo e finanças.",
     "Histórico de sucesso na implementação de soluções de dados que geraram resultados tangíveis para as empresas, sendo apaixonado por buscar inovações que agreguem valor ao crescimento das empresas e pessoas.",
     "Experiência consolidada em liderança de equipes de análise de dados e gerenciamento de projetos complexos, mantendo um perfil autodidata, determinado e disciplinado na busca por resultados e superação de metas.",
+    "Hoje combino a base em dados com IA aplicada: soluções com modelos de linguagem, agentes e busca em documentos, sempre com avaliação de qualidade, segurança e governança desde o desenho.",
   ],
   stats: [
     { value: "10+", label: "Anos de Experiência" },
     { value: "7+", label: "Empresas Impactadas" },
-    { value: "25", label: "Certificações" },
+    { value: String(certifications.total), label: "Certificações" },
   ],
   tags: [
     "#analisededados",
     "#cienciadedados",
     "#bigdata",
     "#businessintelligence",
+    "#iaaplicada",
+    "#llm",
     "#datavisualization",
     "#gestãodepessoas",
     "#liderança",
-    "#recrutamentoeseletração",
+    "#recrutamentoeseleção",
     "#desenvolvimentodeequipes",
     "#culturaorganizacional",
   ],
@@ -200,10 +210,25 @@ export const skillCategories: SkillCategory[] = [
     color: "indigo",
   },
   {
-    title: "AI & Innovation",
+    title: "IA Aplicada",
     icon: "brain",
-    skills: ["GenAI", "Prompt Engineering", "Inteligência Artificial", "D.R.I.V.E."],
+    skills: [
+      "LLMs e GenAI",
+      "Agentes e Tool Calling",
+      "RAG e Embeddings",
+      "Bancos Vetoriais",
+      "Engenharia de Prompt e Contexto",
+      "Avaliação de Modelos",
+      "Segurança e Governança de IA",
+      "D.R.I.V.E.",
+    ],
     color: "violet",
+  },
+  {
+    title: "Backend & Integrações",
+    icon: "server",
+    skills: ["C# / .NET", "APIs REST", "SQL Server", "SOLID", "Semantic Kernel", "LangChain / LangGraph"],
+    color: "blue",
   },
   {
     title: "Liderança",
@@ -215,7 +240,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Cloud",
     icon: "cloud",
     skills: ["Oracle Cloud", "AWS", "DW/Data Lake"],
-    color: "blue",
+    color: "cyan",
   },
   {
     title: "Metodologias",
@@ -236,7 +261,7 @@ export interface Education {
 export const education: Education[] = [
   {
     institution: "Escola Conquer",
-    degree: "MBA — Pós-Graduação Latu Sensu",
+    degree: "MBA — Pós-Graduação Lato Sensu",
     field: "Liderança e Gestão de Pessoas",
     period: "2022 — 2023",
     highlight: "Analítica de dados",
@@ -250,13 +275,6 @@ export const education: Education[] = [
   },
 ];
 
-export const certifications = {
-  total: 25,
-  featured: [
-    { name: "Inteligência Artificial 2ª Edição", issuer: "Alura", year: "2024" },
-  ],
-};
-
 export interface Project {
   id: string;
   name: string;
@@ -265,6 +283,7 @@ export interface Project {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
+  category: string; // rótulo exibido no topo do card
   badge?: string; // ex: "Em produção", "Beta"
   color: string; // classe de cor Tailwind para o accent
 }
@@ -278,10 +297,40 @@ export const projects: Project[] = [
       "App web full-stack de planejamento de viagens inteligente. Gera roteiros personalizados com Gemini AI, controla custos por categoria com OCR de recibos, suporta múltiplos viajantes e funciona 100% offline. Inclui sistema de assinaturas (Stripe), referral, cupons promocionais e painel SuperAdmin.",
     techStack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Drizzle ORM", "Gemini AI", "Stripe", "Vite"],
     liveUrl: "https://kedgo.pro",
+    category: "SaaS & Web App",
     badge: "Em produção",
     color: "cyan",
   },
 ];
+
+// Títulos e textos de apoio de cada seção
+export const sectionTexts = {
+  about: {
+    title: "Liderança em dados e IA com paixão por",
+    highlight: "transformar dados em impacto",
+  },
+  experience: {
+    title: "Trajetória Profissional",
+    subtitle: "+10 anos construindo pontes entre dados e decisões",
+  },
+  skills: {
+    title: "Competências & Tecnologias",
+    subtitle: "Stack técnica e habilidades que impulsionam resultados",
+  },
+  projects: {
+    title: "Projetos em Destaque",
+    subtitle:
+      "Aplicações reais desenvolvidas de ponta a ponta com foco em IA, usabilidade e arquitetura escalável",
+  },
+  education: {
+    title: "Educação & Certificações",
+  },
+  contact: {
+    title: "Vamos",
+    highlight: "conversar?",
+    text: "Transformando dados em decisões estratégicas e em soluções de IA confiáveis. Se você busca alguém que conecte tecnologia, dados e resultados — let's talk.",
+  },
+};
 
 export const navLinks = [
   { label: "Sobre", href: "#about" },

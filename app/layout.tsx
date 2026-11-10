@@ -13,13 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stelio Ked — Data & Analytics Leader",
+  metadataBase: new URL("https://portfolio-stelio-keds-projects.vercel.app"),
+  title: "Stelio Ked — Analytics & Applied AI Leader",
   description:
-    "Portfólio de Stelio Ked — Coordenador de Analytics com +10 anos de experiência transformando dados em decisões estratégicas. Especialista em BI, Automação e Liderança de times de dados.",
+    "Portfólio de Stelio Ked — Coordenador de Analytics com +10 anos de experiência transformando dados em decisões estratégicas. BI, automação, IA aplicada e liderança de times de dados.",
   keywords: [
     "Stelio Ked",
     "Data Analytics",
     "Business Intelligence",
+    "IA Aplicada",
+    "LLM",
+    "Agentes de IA",
+    "RAG",
     "Power BI",
     "Tableau",
     "Coordenador de Analytics",
@@ -27,9 +32,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Stelio Ked" }],
   openGraph: {
-    title: "Stelio Ked — Data & Analytics Leader",
+    title: "Stelio Ked — Analytics & Applied AI Leader",
     description:
-      "+10 anos transformando dados em decisões estratégicas.",
+      "+10 anos transformando dados em decisões estratégicas, agora com IA aplicada.",
     type: "website",
   },
 };

@@ -4,7 +4,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Mail, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { personalInfo } from "@/lib/data";
+import { personalInfo, experiences } from "@/lib/data";
+
+const currentCompany = (experiences.find((e) => e.isActive) ?? experiences[0]).company;
 
 function LinkedInIcon({ size = 14, className = "" }: { size?: number; className?: string }) {
   return (
@@ -97,7 +99,7 @@ export default function HeroSection() {
           className="text-xl sm:text-2xl text-[#eeeef5]/80 font-medium mb-3"
         >
           {personalInfo.title}{" "}
-          <span className="text-[#06d6a0]">@ {experiences0Company()}</span>
+          <span className="text-[#06d6a0]">@ {currentCompany}</span>
         </motion.p>
 
         {/* Tagline */}
@@ -154,9 +156,4 @@ export default function HeroSection() {
       </motion.div>
     </section>
   );
-}
-
-// Helper to get current company without circular deps
-function experiences0Company() {
-  return "Droove";
 }

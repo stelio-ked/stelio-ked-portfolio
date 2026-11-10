@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
-import { personalInfo } from "@/lib/data";
+import { personalInfo, sectionTexts } from "@/lib/data";
 
 function LinkedInIcon({ size = 18, className = "" }: { size?: number; className?: string }) {
   return (
@@ -47,13 +47,12 @@ export default function ContactSection() {
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#eeeef5] mb-5">
-            Vamos{" "}
-            <span className="gradient-text-hero">conversar?</span>
+            {sectionTexts.contact.title}{" "}
+            <span className="gradient-text-hero">{sectionTexts.contact.highlight}</span>
           </h2>
 
           <p className="text-[#7a7a9e] text-lg max-w-lg mx-auto mb-12">
-            Transformando dados em decisões estratégicas. Se você busca alguém
-            que conecte tecnologia, dados e resultados — let&apos;s talk.
+            {sectionTexts.contact.text}
           </p>
 
           {/* CTA Buttons */}

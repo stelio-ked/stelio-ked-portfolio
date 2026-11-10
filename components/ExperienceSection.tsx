@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, MapPin } from "lucide-react";
-import { experiences } from "@/lib/data";
+import { experiences, sectionTexts } from "@/lib/data";
 
 const containerVariants = {
   hidden: {},
@@ -47,10 +47,10 @@ export default function ExperienceSection() {
             Experiência
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
-            Trajetória Profissional
+            {sectionTexts.experience.title}
           </h2>
           <p className="text-[#7a7a9e] mt-3 text-lg">
-            +10 anos construindo pontes entre dados e decisões
+            {sectionTexts.experience.subtitle}
           </p>
         </motion.div>
 

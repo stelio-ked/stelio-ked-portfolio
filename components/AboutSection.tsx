@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Target, Brain, TrendingDown, Compass } from "lucide-react";
-import { aboutText } from "@/lib/data";
+import { aboutText, sectionTexts } from "@/lib/data";
 
 const iconMap: Record<string, React.ElementType> = {
   target: Target,
@@ -49,8 +49,8 @@ export default function AboutSection() {
               {aboutText.headline}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5] max-w-2xl">
-              Data-driven leader com paixão por{" "}
-              <span className="gradient-text">transformar dados em impacto</span>
+              {sectionTexts.about.title}{" "}
+              <span className="gradient-text">{sectionTexts.about.highlight}</span>
             </h2>
           </motion.div>
 

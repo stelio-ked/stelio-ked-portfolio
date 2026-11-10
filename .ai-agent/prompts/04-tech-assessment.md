@@ -1,0 +1,1 @@
+/tech-assessment Hoje a aplicação roda em <stack atual, ex.: .NET 8 + SQL Server>. Queremos <objetivo>. Avalie se vale manter <X> ou migrar para <Y>, e se deve ser uma aplicação única ou duas aplicações com login compartilhado.
