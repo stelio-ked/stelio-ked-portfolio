@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-stelio-keds-projects.vercel.app"),
   title: "Stelio Ked — Analytics & Applied AI Leader",
   description:
     "Portfólio de Stelio Ked — Coordenador de Analytics com +10 anos de experiência transformando dados em decisões estratégicas. BI, automação, IA aplicada e liderança de times de dados.",

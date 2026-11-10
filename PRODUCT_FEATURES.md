@@ -100,7 +100,7 @@ Página única com rolagem. Menu fixo no topo:
 ### Dados de busca e compartilhamento
 
 - **O que acontece:** o site define título, descrição e palavras-chave para buscadores e prévia de compartilhamento (idioma pt-BR)
-- **Experiência:** ⚠ a prévia de compartilhamento não tem imagem definida
+- **Experiência:** a prévia de compartilhamento tem imagem própria (nome, cargo e frase de posicionamento, no tema do site)
 
 ## Previsto (ainda não existe)
 

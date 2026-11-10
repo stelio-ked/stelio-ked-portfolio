@@ -30,7 +30,7 @@
 | Duas experiências com o mesmo período | Duas posições de 2021 têm o mesmo intervalo (`Jun 2021 — Dez 2021`) porque as empresas foram consolidadas no período; a data exata da transição não é conhecida | Mantido como está; ajustar quando a data for confirmada |
 | ✅ Resolvido: grafia | `#recrutamentoeseleção` e "Lato Sensu" corrigidos | — |
 | Contatos públicos | E-mail e telefone pessoal estão no código-fonte e no site | Decisão do dono; aumenta exposição a spam |
-| Metadados | ✅ Título, descrição e palavras-chave já citam IA aplicada; ainda sem imagem de compartilhamento | Definir imagem de prévia |
+| Metadados | ✅ Título, descrição e palavras-chave citam IA aplicada; imagem de prévia gerada em `app/opengraph-image.tsx` a partir de `lib/data.ts` | `metadataBase` aponta para o endereço da Vercel; trocar se houver domínio próprio |
 | Acessibilidade | Botão de menu tem `aria-label`; não foram verificados contraste das cores, foco por teclado e movimento reduzido | ⚠ Avaliar com Lighthouse |
 | ✅ Resolvido: verificação no CI | O workflow `site-check.yml` roda `npm run lint` e `npm run build`; o `ai-check` cobre o padrão de IA | Continua sem testes automatizados |
 | Hospedagem | ✅ Definida: Vercel, na raiz do domínio | Nenhum ajuste em `next.config.ts` necessário |
