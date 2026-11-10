@@ -39,3 +39,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# --- Padrão Ked de IA ---
+# Segredos (nunca no Git)
+.env
+.env.*
+!.env.example
+*.key
+*.pfx
+*.p12
+secrets/
+# Ambiente local
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+build/
+# Configuração pessoal do Claude Code
+.claude/settings.local.json
+CLAUDE.local.md
+# Lista de confidencialidade (nomes de clientes; nunca no Git)
+.ai-agent/policy/*.local.txt
+# Temporários do agente
+.ai-agent/work/tmp/

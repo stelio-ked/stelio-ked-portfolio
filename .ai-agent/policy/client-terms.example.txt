@@ -1,0 +1,6 @@
+# Modelo da lista de confidencialidade.
+# Copie para client-terms.local.txt (ignorado pelo Git) e escreva um termo por linha:
+# nomes de clientes, empregadores, produtos internos, domínios e siglas de projetos.
+# Ficam de fora do Git e bloqueados para leitura pelo agente.
+# Usada por guard_client_terms.py (ao gravar arquivos) e check_client_terms.py (em /security-check).
+# Exemplos (apague): Cliente Exemplo S.A.

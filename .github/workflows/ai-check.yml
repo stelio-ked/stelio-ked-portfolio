@@ -1,0 +1,28 @@
+# Verificações do Padrão Ked de IA.
+# Para exigir no merge: Settings > Branches > regra de proteção > "Require status checks" > ai-check.
+name: ai-check
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  ai-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: .claude/ sincronizado com .ai-agent/
+        run: python .ai-agent/scripts/sync_adapters.py --check
+      - name: Markdown nas pastas permitidas
+        run: python .ai-agent/scripts/check_md_locations.py
+      - name: Nenhum segredo no código (gitleaks)
+        run: |
+          docker run --rm -v "$GITHUB_WORKSPACE:/repo" zricethezav/gitleaks:v8.18.4 \
+            detect --source /repo --no-git --redact -v
