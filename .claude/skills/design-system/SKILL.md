@@ -80,7 +80,8 @@ Campos de formulário, tabelas e modais **não existem** neste site. Se forem cr
 - **Entrada:** seções animam com Framer Motion (`opacity 0→1`, `y 30–40→0`, 0,5 a 0,6 s, `staggerChildren` de 0,08 a 0,15 s), uma vez, ao entrar na tela (`useInView`/`whileInView`, `once: true`).
 - **Hover:** cards sobem 1 a 2 px e ganham borda e brilho; títulos de card mudam para ciano; chips e tags clareiam; botões aumentam levemente.
 - **Ativo/pressionado:** botões reduzem para `scale-[0.98]`.
-- **Movimento contínuo:** aurora em fundo, gradiente de texto deslizando e indicador de rolagem. ⚠ Não há tratamento de `prefers-reduced-motion`.
+- **Movimento contínuo:** aurora em fundo, gradiente de texto deslizando e indicador de rolagem.
+- **Movimento reduzido:** com `prefers-reduced-motion`, o CSS de `globals.css` encerra animações e transições, e `MotionProvider` (`MotionConfig reducedMotion="user"`) desliga as de transformação do Framer Motion. Toda animação nova deve respeitar isso.
 - **Links externos:** `target="_blank"` com `rel="noopener noreferrer"`.
 - **Estados vazios, erro e carregando:** não existem (site estático sem formulários nem dados remotos).
 - **Textos:** português do Brasil, tom profissional e direto; sem jargão desnecessário. Todo texto de conteúdo vem de `lib/data.ts`.
@@ -97,4 +98,4 @@ Campos de formulário, tabelas e modais **não existem** neste site. Se forem cr
 
 - As cores estão repetidas como hexadecimais nas classes dos componentes; os tokens `--color-accent-*` de `globals.css` quase não são usados.
 - `#f59e0b` (âmbar) e `#ec4899` (rosa, no brilho do projeto violeta) existem só nos componentes.
-- Sem `prefers-reduced-motion`; contraste de `#4a4a6a` sobre o fundo escuro não foi medido.
+- Contraste de `#4a4a6a` sobre o fundo escuro não foi medido.

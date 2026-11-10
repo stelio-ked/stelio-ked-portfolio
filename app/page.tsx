@@ -7,10 +7,11 @@ import ProjectsSection from "@/components/ProjectsSection";
 import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 
 export default function Home() {
   return (
-    <>
+    <MotionProvider>
       {/* Aurora ambient background */}
       <div className="aurora-bg" />
 
@@ -30,7 +31,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-    </>
+    </MotionProvider>
   );
 }
 

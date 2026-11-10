@@ -31,7 +31,7 @@
 | ✅ Resolvido: grafia | `#recrutamentoeseleção` e "Lato Sensu" corrigidos | — |
 | Contatos públicos | E-mail e telefone pessoal estão no código-fonte e no site | Decisão do dono; aumenta exposição a spam |
 | Metadados | ✅ Título, descrição e palavras-chave citam IA aplicada; imagem de prévia gerada em `app/opengraph-image.tsx` a partir de `lib/data.ts` | `metadataBase` aponta para o endereço da Vercel; trocar se houver domínio próprio |
-| Acessibilidade | Botão de menu tem `aria-label`; não foram verificados contraste das cores, foco por teclado e movimento reduzido | ⚠ Avaliar com Lighthouse |
+| Acessibilidade | Botão de menu tem `aria-label`; ✅ movimento reduzido tratado (`prefers-reduced-motion`); não foram verificados contraste das cores e foco por teclado | ⚠ Avaliar com Lighthouse |
 | ✅ Resolvido: verificação no CI | O workflow `site-check.yml` roda `npm run lint` e `npm run build`; o `ai-check` cobre o padrão de IA | Continua sem testes automatizados |
 | Hospedagem | ✅ Definida: Vercel, na raiz do domínio | Nenhum ajuste em `next.config.ts` necessário |
 
