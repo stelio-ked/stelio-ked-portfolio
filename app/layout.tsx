@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { personalInfo } from "@/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-stelio-keds-projects.vercel.app"),
-  title: "Stelio Ked — Analytics & Applied AI Leader",
-  description:
-    "Portfólio de Stelio Ked — Coordenador de Analytics com +10 anos de experiência transformando dados em decisões estratégicas. BI, automação, IA aplicada e liderança de times de dados.",
+  title: `${personalInfo.name} — ${personalInfo.subtitle}`,
+  description: personalInfo.shareDescription,
   keywords: [
     "Stelio Ked",
     "Data Analytics",
@@ -32,9 +32,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Stelio Ked" }],
   openGraph: {
-    title: "Stelio Ked — Analytics & Applied AI Leader",
-    description:
-      "+10 anos transformando dados em decisões estratégicas, agora com IA aplicada.",
+    title: `${personalInfo.name} — ${personalInfo.subtitle}`,
+    description: personalInfo.shareDescription,
     type: "website",
   },
 };

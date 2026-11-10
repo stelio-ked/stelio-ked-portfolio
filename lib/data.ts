@@ -7,8 +7,11 @@ export const personalInfo = {
   name: "Stelio Ked",
   greeting: "Olá, eu sou",
   title: "Coordenador de Analytics",
-  subtitle: "Analytics & Applied AI Leader",
+  subtitle: "Líder em Analytics e IA Aplicada",
   tagline: "+10 anos transformando dados em decisões estratégicas, agora com IA aplicada",
+  // Descrição para buscadores e prévia de link (o LinkedIn recomenda 100+ caracteres)
+  shareDescription:
+    "Coordenador de Analytics com +10 anos transformando dados em decisões estratégicas. BI, automação, IA aplicada e liderança de times de dados.",
   location: "Palhoça, SC — Brasil",
   email: "theoked25@gmail.com",
   whatsapp: "5548988076962", // Number without +, spaces or dashes for API link
