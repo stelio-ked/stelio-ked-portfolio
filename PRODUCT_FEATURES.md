@@ -63,7 +63,7 @@ Página única com rolagem. Menu fixo no topo:
 - **Persona:** recrutador(a), gestor(a)
 - **Objetivo:** ver as competências por área
 - **Como chega:** menu "Skills"
-- **O que vê e faz:** categorias (Data & BI, Automação, AI & Innovation, Liderança, Cloud, Metodologias), cada uma com suas competências
+- **O que vê e faz:** categorias (Data & BI, Automação, IA Aplicada, Backend & Integrações, Liderança, Cloud, Metodologias), cada uma com suas competências
 - **Resultado:** mapa das competências para comparar com uma vaga
 
 ### Projetos
@@ -112,4 +112,4 @@ Página única com rolagem. Menu fixo no topo:
 
 - ⚠ Confirmar se visitantes esperam currículo para download e versão em inglês
 - ⚠ Confirmar se WhatsApp e e-mail pessoais devem continuar públicos
-- ⚠ Revisar o posicionamento do título e do texto para vagas de IA, sem citar clientes
+- ✅ Posicionamento para vagas de IA aplicado de forma genérica, sem citar clientes; falta validar com o público-alvo

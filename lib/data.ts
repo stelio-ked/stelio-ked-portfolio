@@ -7,8 +7,8 @@ export const personalInfo = {
   name: "Stelio Ked",
   greeting: "Olá, eu sou",
   title: "Coordenador de Analytics",
-  subtitle: "Data & Analytics Leader",
-  tagline: "+10 anos transformando dados em decisões estratégicas",
+  subtitle: "Analytics & Applied AI Leader",
+  tagline: "+10 anos transformando dados em decisões estratégicas, agora com IA aplicada",
   location: "Palhoça, SC — Brasil",
   email: "theoked25@gmail.com",
   whatsapp: "5548988076962", // Number without +, spaces or dashes for API link
@@ -30,6 +30,7 @@ export const aboutText = {
     "Profissional dinâmico e proativo com mais de 10 anos de experiência na área de dados, atuando em diversos segmentos, incluindo varejo e finanças.",
     "Histórico de sucesso na implementação de soluções de dados que geraram resultados tangíveis para as empresas, sendo apaixonado por buscar inovações que agreguem valor ao crescimento das empresas e pessoas.",
     "Experiência consolidada em liderança de equipes de análise de dados e gerenciamento de projetos complexos, mantendo um perfil autodidata, determinado e disciplinado na busca por resultados e superação de metas.",
+    "Hoje combino a base em dados com IA aplicada: soluções com modelos de linguagem, agentes e busca em documentos, sempre com avaliação de qualidade, segurança e governança desde o desenho.",
   ],
   stats: [
     { value: "10+", label: "Anos de Experiência" },
@@ -41,6 +42,8 @@ export const aboutText = {
     "#cienciadedados",
     "#bigdata",
     "#businessintelligence",
+    "#iaaplicada",
+    "#llm",
     "#datavisualization",
     "#gestãodepessoas",
     "#liderança",
@@ -207,10 +210,25 @@ export const skillCategories: SkillCategory[] = [
     color: "indigo",
   },
   {
-    title: "AI & Innovation",
+    title: "IA Aplicada",
     icon: "brain",
-    skills: ["GenAI", "Prompt Engineering", "Inteligência Artificial", "D.R.I.V.E."],
+    skills: [
+      "LLMs e GenAI",
+      "Agentes e Tool Calling",
+      "RAG e Embeddings",
+      "Bancos Vetoriais",
+      "Engenharia de Prompt e Contexto",
+      "Avaliação de Modelos",
+      "Segurança e Governança de IA",
+      "D.R.I.V.E.",
+    ],
     color: "violet",
+  },
+  {
+    title: "Backend & Integrações",
+    icon: "server",
+    skills: ["C# / .NET", "APIs REST", "SQL Server", "SOLID", "Semantic Kernel", "LangChain / LangGraph"],
+    color: "blue",
   },
   {
     title: "Liderança",
@@ -222,7 +240,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Cloud",
     icon: "cloud",
     skills: ["Oracle Cloud", "AWS", "DW/Data Lake"],
-    color: "blue",
+    color: "cyan",
   },
   {
     title: "Metodologias",
@@ -288,7 +306,7 @@ export const projects: Project[] = [
 // Títulos e textos de apoio de cada seção
 export const sectionTexts = {
   about: {
-    title: "Data-driven leader com paixão por",
+    title: "Liderança em dados e IA com paixão por",
     highlight: "transformar dados em impacto",
   },
   experience: {
@@ -310,7 +328,7 @@ export const sectionTexts = {
   contact: {
     title: "Vamos",
     highlight: "conversar?",
-    text: "Transformando dados em decisões estratégicas. Se você busca alguém que conecte tecnologia, dados e resultados — let's talk.",
+    text: "Transformando dados em decisões estratégicas e em soluções de IA confiáveis. Se você busca alguém que conecte tecnologia, dados e resultados — let's talk.",
   },
 };
 

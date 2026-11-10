@@ -9,6 +9,7 @@ import {
   Users,
   Cloud,
   LayoutGrid,
+  Server,
 } from "lucide-react";
 import { skillCategories, sectionTexts } from "@/lib/data";
 
@@ -19,6 +20,7 @@ const iconMap: Record<string, React.ElementType> = {
   users: Users,
   cloud: Cloud,
   "layout-grid": LayoutGrid,
+  server: Server,
 };
 
 const colorMap: Record<string, { accent: string; bg: string; border: string }> = {

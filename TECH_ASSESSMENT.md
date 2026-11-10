@@ -30,7 +30,7 @@
 | Duas experiências com o mesmo período | Duas posições de 2021 têm o mesmo intervalo (`Jun 2021 — Dez 2021`) porque as empresas foram consolidadas no período; a data exata da transição não é conhecida | Mantido como está; ajustar quando a data for confirmada |
 | ✅ Resolvido: grafia | `#recrutamentoeseleção` e "Lato Sensu" corrigidos | — |
 | Contatos públicos | E-mail e telefone pessoal estão no código-fonte e no site | Decisão do dono; aumenta exposição a spam |
-| Metadados | Descrição e palavras-chave focam em BI/Analytics; sem imagem de compartilhamento | Posicionamento de IA depende de atualizar `layout.tsx` |
+| Metadados | ✅ Título, descrição e palavras-chave já citam IA aplicada; ainda sem imagem de compartilhamento | Definir imagem de prévia |
 | Acessibilidade | Botão de menu tem `aria-label`; não foram verificados contraste das cores, foco por teclado e movimento reduzido | ⚠ Avaliar com Lighthouse |
 | ✅ Resolvido: verificação no CI | O workflow `site-check.yml` roda `npm run lint` e `npm run build`; o `ai-check` cobre o padrão de IA | Continua sem testes automatizados |
 | Hospedagem | Sem definição de domínio, deploy ou `basePath` | Se for GitHub Pages em subcaminho, será preciso ajustar `next.config.ts` |
@@ -41,11 +41,11 @@ Manter a arquitetura atual (Next.js estático com conteúdo em `lib/data.ts`), q
 
 1. ✅ Ligar o Hero e o Educação aos dados de `lib/data.ts`.
 2. ✅ Adicionar `npm run lint` e `npm run build` ao CI (`site-check.yml`).
-3. Revisar metadados e conteúdo para o novo posicionamento (IA aplicada), de forma genérica e sem dados de clientes.
+3. ✅ Revisar metadados e conteúdo para o novo posicionamento (IA aplicada), de forma genérica e sem dados de clientes (aplicado em 2026-11-10: título, descrição, palavras-chave, Sobre e Skills).
 
 ## Decisões que precisam de aprovação
 
 - [x] Correções 1 e 2 acima (aplicadas em 2026-11-10)
-- [ ] Revisão de conteúdo e metadados (item 3)
+- [x] Revisão de conteúdo e metadados (item 3, aplicada em 2026-11-10)
 - [ ] Definir onde o site será hospedado
 - [ ] Manter e-mail e WhatsApp públicos
