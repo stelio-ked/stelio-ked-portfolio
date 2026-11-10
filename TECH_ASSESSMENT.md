@@ -12,7 +12,7 @@
 | Dados | Arquivo único `lib/data.ts`; sem banco, sem API e sem variáveis de ambiente |
 | Estrutura | Página única (`app/page.tsx`) compõe 9 componentes; seções de conteúdo em `components/` |
 | Qualidade | ESLint (`eslint-config-next`); sem testes automatizados |
-| Hospedagem | ⚠ Não registrada no repositório (sem workflow de deploy nem `basePath`) |
+| Hospedagem | Vercel (deploy a partir do GitHub); sem `basePath` |
 | Integrações | Nenhuma; contato por `mailto:`, `wa.me` e LinkedIn |
 
 ## Decisões que o código revela
@@ -33,7 +33,7 @@
 | Metadados | ✅ Título, descrição e palavras-chave já citam IA aplicada; ainda sem imagem de compartilhamento | Definir imagem de prévia |
 | Acessibilidade | Botão de menu tem `aria-label`; não foram verificados contraste das cores, foco por teclado e movimento reduzido | ⚠ Avaliar com Lighthouse |
 | ✅ Resolvido: verificação no CI | O workflow `site-check.yml` roda `npm run lint` e `npm run build`; o `ai-check` cobre o padrão de IA | Continua sem testes automatizados |
-| Hospedagem | Sem definição de domínio, deploy ou `basePath` | Se for GitHub Pages em subcaminho, será preciso ajustar `next.config.ts` |
+| Hospedagem | ✅ Definida: Vercel, na raiz do domínio | Nenhum ajuste em `next.config.ts` necessário |
 
 ## Recomendação
 
@@ -48,5 +48,5 @@ Manter a arquitetura atual (Next.js estático com conteúdo em `lib/data.ts`), q
 - [x] Correções 1 e 2 acima (aplicadas em 2026-11-10)
 - [x] Revisão de conteúdo e metadados (item 3, aplicada em 2026-11-10)
 - [x] Competências de IA e .NET listadas de forma genérica, sem clientes (confirmado pelo dono em 2026-11-10)
-- [ ] Definir onde o site será hospedado
-- [ ] Manter e-mail e WhatsApp públicos
+- [x] Hospedagem: Vercel (https://portfolio-stelio-keds-projects.vercel.app/), código em https://github.com/stelio-ked/stelio-ked-portfolio. Sem `basePath` (domínio na raiz)
+- [x] E-mail e WhatsApp permanecem públicos (decisão do dono, 2026-11-10)
