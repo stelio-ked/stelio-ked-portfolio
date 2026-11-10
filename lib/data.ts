@@ -265,6 +265,7 @@ export interface Project {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
+  category: string; // rótulo exibido no topo do card
   badge?: string; // ex: "Em produção", "Beta"
   color: string; // classe de cor Tailwind para o accent
 }
@@ -278,10 +279,40 @@ export const projects: Project[] = [
       "App web full-stack de planejamento de viagens inteligente. Gera roteiros personalizados com Gemini AI, controla custos por categoria com OCR de recibos, suporta múltiplos viajantes e funciona 100% offline. Inclui sistema de assinaturas (Stripe), referral, cupons promocionais e painel SuperAdmin.",
     techStack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Drizzle ORM", "Gemini AI", "Stripe", "Vite"],
     liveUrl: "https://kedgo.pro",
+    category: "SaaS & Web App",
     badge: "Em produção",
     color: "cyan",
   },
 ];
+
+// Títulos e textos de apoio de cada seção
+export const sectionTexts = {
+  about: {
+    title: "Data-driven leader com paixão por",
+    highlight: "transformar dados em impacto",
+  },
+  experience: {
+    title: "Trajetória Profissional",
+    subtitle: "+10 anos construindo pontes entre dados e decisões",
+  },
+  skills: {
+    title: "Competências & Tecnologias",
+    subtitle: "Stack técnica e habilidades que impulsionam resultados",
+  },
+  projects: {
+    title: "Projetos em Destaque",
+    subtitle:
+      "Aplicações reais desenvolvidas de ponta a ponta com foco em IA, usabilidade e arquitetura escalável",
+  },
+  education: {
+    title: "Educação & Certificações",
+  },
+  contact: {
+    title: "Vamos",
+    highlight: "conversar?",
+    text: "Transformando dados em decisões estratégicas. Se você busca alguém que conecte tecnologia, dados e resultados — let's talk.",
+  },
+};
 
 export const navLinks = [
   { label: "Sobre", href: "#about" },

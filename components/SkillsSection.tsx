@@ -10,7 +10,7 @@ import {
   Cloud,
   LayoutGrid,
 } from "lucide-react";
-import { skillCategories } from "@/lib/data";
+import { skillCategories, sectionTexts } from "@/lib/data";
 
 const iconMap: Record<string, React.ElementType> = {
   "bar-chart-3": BarChart3,
@@ -91,10 +91,10 @@ export default function SkillsSection() {
             Skills
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
-            Competências & Tecnologias
+            {sectionTexts.skills.title}
           </h2>
           <p className="text-[#7a7a9e] mt-3 text-lg">
-            Stack técnica e habilidades que impulsionam resultados
+            {sectionTexts.skills.subtitle}
           </p>
         </motion.div>
 

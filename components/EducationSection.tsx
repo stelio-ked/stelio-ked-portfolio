@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Award, ExternalLink } from "lucide-react";
-import { education, certifications, personalInfo } from "@/lib/data";
+import { education, certifications, personalInfo, sectionTexts } from "@/lib/data";
 
 const containerVariants = {
   hidden: {},
@@ -44,7 +44,7 @@ export default function EducationSection() {
             Formação
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
-            Educação & Certificações
+            {sectionTexts.education.title}
           </h2>
         </motion.div>
 

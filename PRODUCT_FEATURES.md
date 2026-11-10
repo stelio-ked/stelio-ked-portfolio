@@ -1,6 +1,6 @@
 # Product Features — Portfólio de Stelio Ked
 
-> Visão do visitante. Fonte da verdade do produto. Gerado a partir do código e de `lib/data.ts` em 2026-11-10 (o site não foi navegado em execução). Revisado com: <pessoa>, em <data>.
+> Visão do visitante. Fonte da verdade do produto. Gerado a partir do código e de `lib/data.ts` em 2026-11-10 (o site não foi navegado em execução). Ainda não revisado com alguém do público-alvo.
 
 ## Personas
 

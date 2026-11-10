@@ -27,7 +27,7 @@
 | --- | --- | --- |
 | ✅ Resolvido: dado fixo no componente | O Hero tinha a empresa atual fixa no código; agora lê a experiência ativa de `lib/data.ts` | Ao mudar de empresa, o Hero acompanha os dados |
 | ✅ Resolvido: duplicação de dados | A URL do LinkedIn em `EducationSection.tsx` e o total de certificações em `aboutText.stats` agora vêm de `personalInfo.linkedin` e `certifications.total` | Valores não divergem mais |
-| iTech Care e Dasa com o mesmo período | A Dasa incorporou a iTech Care em 2021 e as equipes foram consolidadas; a data exata da incorporação não é conhecida | Mantido `Jun 2021 — Dez 2021` nas duas; ajustar quando a data for confirmada |
+| Duas experiências com o mesmo período | Duas posições de 2021 têm o mesmo intervalo (`Jun 2021 — Dez 2021`) porque as empresas foram consolidadas no período; a data exata da transição não é conhecida | Mantido como está; ajustar quando a data for confirmada |
 | ✅ Resolvido: grafia | `#recrutamentoeseleção` e "Lato Sensu" corrigidos | — |
 | Contatos públicos | E-mail e telefone pessoal estão no código-fonte e no site | Decisão do dono; aumenta exposição a spam |
 | Metadados | Descrição e palavras-chave focam em BI/Analytics; sem imagem de compartilhamento | Posicionamento de IA depende de atualizar `layout.tsx` |
@@ -48,5 +48,4 @@ Manter a arquitetura atual (Next.js estático com conteúdo em `lib/data.ts`), q
 - [x] Correções 1 e 2 acima (aplicadas em 2026-11-10)
 - [ ] Revisão de conteúdo e metadados (item 3)
 - [ ] Definir onde o site será hospedado
-- [ ] Manter e-mail e WhatsApp públicos
 - [ ] Manter e-mail e WhatsApp públicos
