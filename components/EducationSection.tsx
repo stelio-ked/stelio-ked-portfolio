@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Award, ExternalLink } from "lucide-react";
-import { education, certifications } from "@/lib/data";
+import { education, certifications, personalInfo } from "@/lib/data";
 
 const containerVariants = {
   hidden: {},
@@ -146,7 +146,7 @@ export default function EducationSection() {
 
               {/* LinkedIn CTA */}
               <a
-                href="https://www.linkedin.com/in/stelio-ked/"
+                href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 mt-6 py-3 px-4 rounded-xl bg-white/[0.03] border border-white/[0.06] text-[#7a7a9e] text-sm font-medium hover:text-[#eeeef5] hover:border-[#6366f1]/30 hover:bg-[#6366f1]/5 transition-all duration-300"

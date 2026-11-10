@@ -17,6 +17,13 @@ export const personalInfo = {
   avatarUrl: "/images/avatar-final.webp",
 };
 
+export const certifications = {
+  total: 25,
+  featured: [
+    { name: "Inteligência Artificial 2ª Edição", issuer: "Alura", year: "2024" },
+  ],
+};
+
 export const aboutText = {
   headline: "Sobre mim",
   paragraphs: [
@@ -27,7 +34,7 @@ export const aboutText = {
   stats: [
     { value: "10+", label: "Anos de Experiência" },
     { value: "7+", label: "Empresas Impactadas" },
-    { value: "25", label: "Certificações" },
+    { value: String(certifications.total), label: "Certificações" },
   ],
   tags: [
     "#analisededados",
@@ -37,7 +44,7 @@ export const aboutText = {
     "#datavisualization",
     "#gestãodepessoas",
     "#liderança",
-    "#recrutamentoeseletração",
+    "#recrutamentoeseleção",
     "#desenvolvimentodeequipes",
     "#culturaorganizacional",
   ],
@@ -236,7 +243,7 @@ export interface Education {
 export const education: Education[] = [
   {
     institution: "Escola Conquer",
-    degree: "MBA — Pós-Graduação Latu Sensu",
+    degree: "MBA — Pós-Graduação Lato Sensu",
     field: "Liderança e Gestão de Pessoas",
     period: "2022 — 2023",
     highlight: "Analítica de dados",
@@ -249,13 +256,6 @@ export const education: Education[] = [
     highlight: "Business Intelligence e Analítica de dados",
   },
 ];
-
-export const certifications = {
-  total: 25,
-  featured: [
-    { name: "Inteligência Artificial 2ª Edição", issuer: "Alura", year: "2024" },
-  ],
-};
 
 export interface Project {
   id: string;
