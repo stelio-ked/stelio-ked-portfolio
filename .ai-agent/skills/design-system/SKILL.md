@@ -7,9 +7,38 @@ description: Padrão visual deste projeto (tema "Aurora", escuro com gradientes)
 
 Fonte da verdade do estilo: [app/globals.css](app/globals.css) (tokens e classes utilitárias) e os componentes em `components/`. Extraído do código em 2026-11-10; não inventar um visual novo sem pedido.
 
+## Temas (escuro e claro)
+
+O site tem dois temas. O **escuro é o padrão ao abrir**; o visitante alterna pelo botão sol/lua do menu (`components/ThemeToggle.tsx`) e a escolha fica salva no navegador (`localStorage`, chave `theme`). O tema vive no atributo `data-theme` do `<html>`: ausente ou `dark` = escuro, `light` = claro. Um script em `app/layout.tsx` aplica o tema salvo antes da primeira pintura, para não piscar.
+
+**Regra de ouro:** nunca escrever cor em hexadecimal nas classes dos componentes. Usar as classes semânticas, que leem as variáveis de [app/globals.css](app/globals.css) (`:root` = escuro, `:root[data-theme="light"]` = claro):
+
+| Classe | Variável | Escuro | Claro |
+| --- | --- | --- | --- |
+| `bg-bg-primary` / `bg-bg-secondary` | `--bg-primary` / `--bg-secondary` | `#06060e` / `#0c0c18` | `#f5f7fc` / `#ffffff` |
+| `bg-bg-card` / `bg-bg-card-hover` | `--bg-card` / `--bg-card-hover` | `#111122` / `#161630` | `#ffffff` / `#eef2fa` |
+| `text-text-primary` | `--text-primary` | `#eeeef5` | `#0f1226` |
+| `text-text-secondary` | `--text-secondary` | `#7a7a9e` | `#4b5270` |
+| `text-text-muted` | `--text-muted` | `#4a4a6a` | `#626a8a` |
+| `bg-fg/5`, `border-fg/10`, `text-fg` | `--fg` | `#ffffff` | `#0f1226` |
+| `text-accent-cyan` | `--accent-cyan` | `#06d6a0` | `#047857` |
+| `text-accent-blue` | `--accent-blue` | `#3b82f6` | `#1d4ed8` |
+| `text-accent-indigo` | `--accent-indigo` | `#6366f1` | `#4338ca` |
+| `text-accent-violet` | `--accent-violet` | `#8b5cf6` | `#6d28d9` |
+| `text-accent-emerald` | `--accent-emerald` | `#10b981` | `#15803d` |
+| `text-accent-amber` | `--accent-amber` | `#f59e0b` | `#b45309` |
+| `text-accent-indigo-soft` / `text-accent-violet-soft` | `--accent-indigo-soft` / `--accent-violet-soft` | `#a5b4fc` / `#c4b5fd` | `#4f46e5` / `#7c3aed` |
+| `text-whatsapp` | `--whatsapp` | `#25d366` | `#15803d` |
+
+As sobreposições translúcidas (antes `white/[0.04]`) usam `fg/[0.04]`: branco no escuro, azul-marinho no claro. Vidro dos cards, aurora de fundo e grade têm variáveis próprias (`--glass-bg`, `--glass-border`, `--aurora-1..3`, `--grid-line`). Os acentos do tema claro foram escurecidos para manter contraste de texto (alvo mínimo 4,5:1; só foi checado a olho, falta medir com Lighthouse). Botões em gradiente mantêm `text-white`, que funciona nos dois temas.
+
+Texto de interface novo (rótulos de acessibilidade) vai em `uiTexts`, em `lib/data.ts`.
+
 ## Tokens
 
 ### Cores
+
+Valores abaixo = **tema escuro** (referência). No tema claro, ver a tabela acima.
 
 | Papel | Valor | Uso |
 | --- | --- | --- |
@@ -88,7 +117,7 @@ Campos de formulário, tabelas e modais **não existem** neste site. Se forem cr
 
 ## Regras ao criar ou alterar telas
 
-1. Reusar `.glass-card`, `.section-label`, `.tech-badge`, `.gradient-text` e as cores acima antes de criar estilo novo.
+1. Reusar `.glass-card`, `.section-label`, `.tech-badge`, `.gradient-text` e as classes de cor semânticas (seção "Temas") antes de criar estilo novo. Nada de hexadecimal nas classes; toda tela nova deve ser conferida nos dois temas.
 2. Nova seção: seguir o esqueleto `section.relative.py-24.sm:py-32 > div.max-w-6xl.mx-auto.px-6`, com rótulo de seção, `h2` e animação de entrada.
 3. Conteúdo em `lib/data.ts`; o componente só apresenta. Títulos e subtítulos de seção ficam em `sectionTexts`; o rótulo do card de projeto em `Project.category`.
 4. Nova categoria ou projeto com cor: usar uma das chaves existentes (`cyan`, `indigo`, `violet`, `emerald`, `blue`, `amber`) ou acrescentar a nova ao `colorMap` do componente.
@@ -96,6 +125,5 @@ Campos de formulário, tabelas e modais **não existem** neste site. Se forem cr
 
 ## Inconsistências conhecidas (não corrigir sem pedido)
 
-- As cores estão repetidas como hexadecimais nas classes dos componentes; os tokens `--color-accent-*` de `globals.css` quase não são usados.
-- `#f59e0b` (âmbar) e `#ec4899` (rosa, no brilho do projeto violeta) existem só nos componentes.
-- Contraste de `#4a4a6a` sobre o fundo escuro não foi medido.
+- Contraste dos dois temas (em especial `text-text-muted` e os acentos do tema claro) não foi medido com ferramenta.
+- O tema não segue a preferência do sistema do visitante: abre sempre no escuro até a pessoa escolher.

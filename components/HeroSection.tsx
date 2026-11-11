@@ -35,9 +35,9 @@ export default function HeroSection() {
     >
       {/* Aurora background orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-[#06d6a0]/[0.04] blur-[120px] animate-[float_20s_ease-in-out_infinite]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#3b82f6]/[0.05] blur-[120px] animate-[float_15s_ease-in-out_infinite_reverse]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#8b5cf6]/[0.03] blur-[120px] animate-[float_25s_ease-in-out_infinite]" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-accent-cyan/[0.04] blur-[120px] animate-[float_20s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-accent-blue/[0.05] blur-[120px] animate-[float_15s_ease-in-out_infinite_reverse]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-violet/[0.03] blur-[120px] animate-[float_25s_ease-in-out_infinite]" />
       </div>
 
       {/* Grid pattern */}
@@ -55,8 +55,8 @@ export default function HeroSection() {
           className="mb-8 flex justify-center"
         >
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-br from-[#06d6a0] via-[#3b82f6] to-[#8b5cf6] rounded-full opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-[#06060e]">
+            <div className="absolute -inset-1 bg-gradient-to-br from-accent-cyan via-accent-blue to-accent-violet rounded-full opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-bg-primary">
               <Image
                 src={personalInfo.avatarUrl}
                 alt={personalInfo.name}
@@ -66,7 +66,7 @@ export default function HeroSection() {
               />
             </div>
             {/* Active indicator */}
-            <div className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-[#06d6a0] border-[3px] border-[#06060e] shadow-lg shadow-[#06d6a0]/30" />
+            <div className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-accent-cyan border-[3px] border-bg-primary shadow-lg shadow-accent-cyan/30" />
           </div>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-[#7a7a9e] text-sm font-medium tracking-widest uppercase mb-4"
+          className="text-text-secondary text-sm font-medium tracking-widest uppercase mb-4"
           style={{ fontFamily: "var(--font-geist-mono), monospace" }}
         >
           {personalInfo.greeting}
@@ -96,10 +96,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-xl sm:text-2xl text-[#eeeef5]/80 font-medium mb-3"
+          className="text-xl sm:text-2xl text-text-primary/80 font-medium mb-3"
         >
           {personalInfo.title}{" "}
-          <span className="text-[#06d6a0]">@ {currentCompany}</span>
+          <span className="text-accent-cyan">@ {currentCompany}</span>
         </motion.p>
 
         {/* Tagline */}
@@ -107,7 +107,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="text-[#7a7a9e] text-lg mb-10 max-w-xl mx-auto"
+          className="text-text-secondary text-lg mb-10 max-w-xl mx-auto"
         >
           {personalInfo.tagline}
         </motion.p>
@@ -119,24 +119,24 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.9 }}
           className="flex flex-wrap items-center justify-center gap-3 mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/8 text-[#7a7a9e] text-sm hover:border-[#06d6a0]/30 hover:text-[#eeeef5] transition-all duration-300">
-            <MapPin size={14} className="text-[#06d6a0]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-fg/5 border border-fg/8 text-text-secondary text-sm hover:border-accent-cyan/30 hover:text-text-primary transition-all duration-300">
+            <MapPin size={14} className="text-accent-cyan" />
             {personalInfo.location}
           </span>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/8 text-[#7a7a9e] text-sm hover:border-[#3b82f6]/30 hover:text-[#eeeef5] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-fg/5 border border-fg/8 text-text-secondary text-sm hover:border-accent-blue/30 hover:text-text-primary transition-all duration-300"
           >
-            <Mail size={14} className="text-[#3b82f6]" />
+            <Mail size={14} className="text-accent-blue" />
             Email
           </a>
           <a
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/8 text-[#7a7a9e] text-sm hover:border-[#8b5cf6]/30 hover:text-[#eeeef5] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-fg/5 border border-fg/8 text-text-secondary text-sm hover:border-accent-violet/30 hover:text-text-primary transition-all duration-300"
           >
-            <LinkedInIcon size={14} className="text-[#8b5cf6]" />
+            <LinkedInIcon size={14} className="text-accent-violet" />
             LinkedIn
           </a>
         </motion.div>
@@ -148,10 +148,10 @@ export default function HeroSection() {
           transition={{ delay: 1.2 }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-[#4a4a6a] text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
+          <span className="text-text-muted text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
             Scroll
           </span>
-          <ChevronDown size={18} className="text-[#4a4a6a] animate-scroll-hint" />
+          <ChevronDown size={18} className="text-text-muted animate-scroll-hint" />
         </motion.div>
       </motion.div>
     </section>

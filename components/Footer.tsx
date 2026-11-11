@@ -17,15 +17,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/[0.04]">
+    <footer className="relative border-t border-fg/[0.04]">
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Left */}
-          <div className="flex items-center gap-2 text-[#4a4a6a] text-sm">
+          <div className="flex items-center gap-2 text-text-muted text-sm">
             <span>© {currentYear} {personalInfo.name}</span>
-            <span className="text-[#4a4a6a]/50">·</span>
+            <span className="text-text-muted/50">·</span>
             <span className="inline-flex items-center gap-1">
-              Feito com <Heart size={12} className="text-[#06d6a0] fill-[#06d6a0]" />
+              Feito com <Heart size={12} className="text-accent-cyan fill-accent-cyan" />
             </span>
           </div>
 
@@ -35,14 +35,14 @@ export default function Footer() {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-[#4a4a6a] hover:text-[#a5b4fc] hover:bg-white/5 transition-all duration-300"
+              className="p-2 rounded-lg text-text-muted hover:text-accent-indigo-soft hover:bg-fg/5 transition-all duration-300"
               aria-label="LinkedIn"
             >
               <LinkedInIcon size={16} />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="p-2 rounded-lg text-[#4a4a6a] hover:text-[#06d6a0] hover:bg-white/5 transition-all duration-300"
+              className="p-2 rounded-lg text-text-muted hover:text-accent-cyan hover:bg-fg/5 transition-all duration-300"
               aria-label="Email"
             >
               <Mail size={16} />

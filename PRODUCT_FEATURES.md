@@ -38,7 +38,7 @@ Página única com rolagem. Menu fixo no topo:
 - **Persona:** todas
 - **Objetivo:** ir direto à seção desejada
 - **Como chega:** barra fixa no topo; no celular, botão de menu
-- **O que vê e faz:** links para cada seção, destaque da seção atual conforme a rolagem, botão "Contato"
+- **O que vê e faz:** links para cada seção, destaque da seção atual conforme a rolagem, botão "Contato" e botão de sol/lua para alternar entre tema escuro e claro (abre no escuro; a escolha fica salva no navegador)
 - **Resultado:** acesso rápido a qualquer parte da página
 - **Experiência:** a barra ganha fundo desfocado ao rolar; o menu móvel abre e fecha ao tocar em um link
 
@@ -105,7 +105,7 @@ Página única com rolagem. Menu fixo no topo:
 ## Previsto (ainda não existe)
 
 - ⚠ Projetos novos e provas públicas de trabalho em IA aplicada (a definir)
-- ⚠ Versão do site em inglês
+- ⚠ Versão do site em inglês, com seletor PT/EN (decidido fazer depois do tema)
 - ⚠ Currículo para baixar
 
 ## Pendências com o público-alvo
