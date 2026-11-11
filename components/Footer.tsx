@@ -1,7 +1,7 @@
 "use client";
 
 import { Mail, Heart } from "lucide-react";
-import { personalInfo } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 function LinkedInIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
   return (
@@ -14,6 +14,7 @@ function LinkedInIcon({ size = 16, className = "" }: { size?: number; className?
 }
 
 export default function Footer() {
+  const { personalInfo, ui } = useContent();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
             <span>© {currentYear} {personalInfo.name}</span>
             <span className="text-text-muted/50">·</span>
             <span className="inline-flex items-center gap-1">
-              Feito com <Heart size={12} className="text-accent-cyan fill-accent-cyan" />
+              {ui.madeWith} <Heart size={12} className="text-accent-cyan fill-accent-cyan" />
             </span>
           </div>
 

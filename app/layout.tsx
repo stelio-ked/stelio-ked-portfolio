@@ -50,11 +50,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* Aplica o tema salvo antes da primeira pintura (evita piscar). Padrão: escuro. */}
+        {/* Aplica tema e idioma salvos antes da primeira pintura (evita piscar). Padrão: escuro e português. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{if(localStorage.getItem('theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}",
+              "try{var d=document.documentElement;if(localStorage.getItem('theme')==='light')d.dataset.theme='light';if(localStorage.getItem('lang')==='en'){d.dataset.lang='en';d.lang='en'}}catch(e){}",
           }}
         />
       </head>

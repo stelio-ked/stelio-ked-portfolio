@@ -32,7 +32,7 @@ O site tem dois temas. O **escuro é o padrão ao abrir**; o visitante alterna p
 
 As sobreposições translúcidas (antes `white/[0.04]`) usam `fg/[0.04]`: branco no escuro, azul-marinho no claro. Vidro dos cards, aurora de fundo e grade têm variáveis próprias (`--glass-bg`, `--glass-border`, `--aurora-1..3`, `--grid-line`). Os acentos do tema claro foram escurecidos para manter contraste de texto (alvo mínimo 4,5:1; só foi checado a olho, falta medir com Lighthouse). Botões em gradiente mantêm `text-white`, que funciona nos dois temas.
 
-Texto de interface novo (rótulos de acessibilidade) vai em `uiTexts`, em `lib/data.ts`.
+Texto de interface novo (rótulos, botões, avisos de acessibilidade) vai em `ui`, em `lib/data.ts`, nos dois idiomas.
 
 ## Tokens
 
@@ -113,13 +113,13 @@ Campos de formulário, tabelas e modais **não existem** neste site. Se forem cr
 - **Movimento reduzido:** com `prefers-reduced-motion`, o CSS de `globals.css` encerra animações e transições, e `MotionProvider` (`MotionConfig reducedMotion="user"`) desliga as de transformação do Framer Motion. Toda animação nova deve respeitar isso.
 - **Links externos:** `target="_blank"` com `rel="noopener noreferrer"`.
 - **Estados vazios, erro e carregando:** não existem (site estático sem formulários nem dados remotos).
-- **Textos:** português do Brasil, tom profissional e direto; sem jargão desnecessário. Todo texto de conteúdo vem de `lib/data.ts`.
+- **Textos:** português do Brasil (padrão) e inglês, tom profissional e direto; sem jargão desnecessário. Todo texto de conteúdo vem de `lib/data.ts`, lido pelos componentes com `useContent()` (`lib/useContent.ts`). O idioma é trocado pelo botão PT/EN do menu (`LanguageToggle`), que mostra o código do idioma de destino; a escolha fica em `localStorage` (chave `lang`) e no atributo `data-lang` do `<html>`.
 
 ## Regras ao criar ou alterar telas
 
 1. Reusar `.glass-card`, `.section-label`, `.tech-badge`, `.gradient-text` e as classes de cor semânticas (seção "Temas") antes de criar estilo novo. Nada de hexadecimal nas classes; toda tela nova deve ser conferida nos dois temas.
 2. Nova seção: seguir o esqueleto `section.relative.py-24.sm:py-32 > div.max-w-6xl.mx-auto.px-6`, com rótulo de seção, `h2` e animação de entrada.
-3. Conteúdo em `lib/data.ts`; o componente só apresenta. Títulos e subtítulos de seção ficam em `sectionTexts`; o rótulo do card de projeto em `Project.category`.
+3. Conteúdo em `lib/data.ts`, nos dois idiomas (`pt` e `en`); o componente só apresenta, lendo de `useContent()`. Títulos e subtítulos de seção ficam em `sectionTexts`; o rótulo do card de projeto em `Project.category`.
 4. Nova categoria ou projeto com cor: usar uma das chaves existentes (`cyan`, `indigo`, `violet`, `emerald`, `blue`, `amber`) ou acrescentar a nova ao `colorMap` do componente.
 5. Respeitar contraste: texto de apoio mínimo `#7a7a9e` sobre `#06060e`; `#4a4a6a` só para informação secundária.
 

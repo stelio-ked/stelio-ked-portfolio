@@ -19,7 +19,7 @@ npm run dev      # http://localhost:3000
 
 ## Como atualizar o conteúdo
 
-Todo o texto do site fica em [lib/data.ts](lib/data.ts): dados pessoais, sobre, experiências, skills, formação, projetos e menu. Edite esse arquivo; os componentes apenas exibem os dados.
+Todo o texto do site fica em [lib/data.ts](lib/data.ts): dados pessoais, sobre, experiências, skills, formação, projetos, menu e rótulos. O arquivo tem duas versões, português (`pt`, base) e inglês (`en`, que reaproveita do português o que não muda de idioma, como empresas e tecnologias). Ao alterar um texto, atualize os dois idiomas. Os componentes apenas exibem os dados.
 
 ## Estrutura
 
@@ -27,7 +27,7 @@ Todo o texto do site fica em [lib/data.ts](lib/data.ts): dados pessoais, sobre, 
 | --- | --- |
 | `app/` | Página, layout e estilos globais (Next.js App Router) |
 | `components/` | Uma seção por arquivo (Hero, Sobre, Experiência, Skills, Projetos, Formação, Contato) |
-| `lib/` | `data.ts`, fonte única do conteúdo |
+| `lib/` | `data.ts`, fonte única do conteúdo (PT e EN); `useContent.ts`, idioma atual |
 | `public/` | Imagens estáticas |
 | `docs/` | Documentação técnica (criada quando necessária) |
 | `.ai-agent/` | Skills, agentes, hooks e políticas de IA (Padrão Ked) |

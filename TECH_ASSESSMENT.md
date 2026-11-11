@@ -9,7 +9,8 @@
 | Framework | Next.js 16.2.4, App Router; AGENTS.md avisa que a versão tem mudanças em relação ao conhecimento comum dos modelos (consultar `node_modules/next/dist/docs/`) |
 | Interface | React 19.2.4, TypeScript 5, Tailwind CSS 4, Framer Motion, Lucide, fonte Geist |
 | Saída | Exportação estática (`output: "export"`, imagens sem otimização) → pasta `out/` |
-| Dados | Arquivo único `lib/data.ts`; sem banco, sem API e sem variáveis de ambiente |
+| Dados | Arquivo único `lib/data.ts`, com o conteúdo em português (`pt`) e inglês (`en`); sem banco, sem API e sem variáveis de ambiente |
+| Idiomas | Português (padrão) e inglês, alternados por botão PT/EN. Idioma em `data-lang` no `<html>`, escolha salva em `localStorage`, hook `useContent` (`lib/useContent.ts`). URL única, sem rotas por idioma. Título, descrição e imagem de prévia do link ficam em português (são estáticos) |
 | Estrutura | Página única (`app/page.tsx`) compõe 9 componentes; seções de conteúdo em `components/` |
 | Tema | Escuro (padrão) e claro por variáveis CSS em `globals.css` (`data-theme` no `<html>`); escolha salva em `localStorage`; script em `layout.tsx` evita piscar. Sem dependência nova |
 | Qualidade | ESLint (`eslint-config-next`); sem testes automatizados |

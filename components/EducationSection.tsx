@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Award, ExternalLink } from "lucide-react";
-import { education, certifications, personalInfo, sectionTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 const containerVariants = {
   hidden: {},
@@ -22,6 +22,7 @@ const itemVariants = {
 };
 
 export default function EducationSection() {
+  const { education, certifications, personalInfo, sectionTexts, ui } = useContent();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -41,7 +42,7 @@ export default function EducationSection() {
         >
           <span className="section-label flex items-center gap-3 mb-4">
             <span className="w-8 h-px bg-accent-cyan" />
-            Formação
+            {ui.sections.education}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.education.title}
@@ -62,7 +63,7 @@ export default function EducationSection() {
               className="flex items-center gap-2 text-text-primary font-semibold text-lg mb-6"
             >
               <GraduationCap size={20} className="text-accent-cyan" />
-              Formação Acadêmica
+              {ui.academic}
             </motion.h3>
 
             {education.map((edu, i) => (
@@ -107,7 +108,7 @@ export default function EducationSection() {
               className="flex items-center gap-2 text-text-primary font-semibold text-lg mb-6"
             >
               <Award size={20} className="text-accent-cyan" />
-              Certificações
+              {ui.certifications}
             </motion.h3>
 
             <motion.div
@@ -120,7 +121,7 @@ export default function EducationSection() {
                   {certifications.total}
                 </div>
                 <p className="text-text-secondary text-sm">
-                  certificações concluídas
+                  {ui.certificationsDone}
                 </p>
               </div>
 
@@ -152,7 +153,7 @@ export default function EducationSection() {
                 className="flex items-center justify-center gap-2 mt-6 py-3 px-4 rounded-xl bg-fg/[0.03] border border-fg/[0.06] text-text-secondary text-sm font-medium hover:text-text-primary hover:border-accent-indigo/30 hover:bg-accent-indigo/5 transition-all duration-300"
               >
                 <ExternalLink size={14} />
-                Ver todas no LinkedIn
+                {ui.seeAllLinkedIn}
               </a>
             </motion.div>
           </div>

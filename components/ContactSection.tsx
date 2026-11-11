@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
-import { personalInfo, sectionTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 function LinkedInIcon({ size = 18, className = "" }: { size?: number; className?: string }) {
   return (
@@ -23,6 +23,7 @@ function WhatsAppIcon({ size = 18, className = "" }: { size?: number; className?
 }
 
 export default function ContactSection() {
+  const { personalInfo, sectionTexts, ui } = useContent();
   return (
     <section id="contact" className="relative py-24 sm:py-32">
       {/* Aurora background */}
@@ -42,7 +43,7 @@ export default function ContactSection() {
           {/* Section label */}
           <span className="section-label inline-flex items-center gap-3 mb-6">
             <span className="w-8 h-px bg-accent-cyan" />
-            Contato
+            {ui.sections.contact}
             <span className="w-8 h-px bg-accent-cyan" />
           </span>
 
@@ -62,7 +63,7 @@ export default function ContactSection() {
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-accent-cyan to-accent-blue text-white font-semibold text-base hover:shadow-xl hover:shadow-accent-cyan/20 transition-all duration-400 hover:scale-[1.03]"
             >
               <Mail size={18} />
-              Enviar Email
+              {ui.sendEmail}
               <Send
                 size={14}
                 className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
