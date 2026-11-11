@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Rocket } from "lucide-react";
-import { projects, sectionTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 function GithubIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
   return (
@@ -86,6 +86,7 @@ const cardVariants = {
 };
 
 export default function ProjectsSection() {
+  const { projects, sectionTexts, ui } = useContent();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -105,7 +106,7 @@ export default function ProjectsSection() {
         >
           <span className="section-label flex items-center gap-3 mb-4">
             <span className="w-8 h-px bg-accent-cyan" />
-            Projetos
+            {ui.sections.projects}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.projects.title}
@@ -205,7 +206,7 @@ export default function ProjectsSection() {
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-accent-cyan to-accent-blue text-white font-medium text-sm shadow-lg shadow-accent-cyan/20 hover:shadow-accent-cyan/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                       >
                         <ExternalLink size={16} />
-                        Ver ao vivo
+                        {ui.viewLive}
                       </a>
                     )}
 

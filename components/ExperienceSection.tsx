@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, MapPin } from "lucide-react";
-import { experiences, sectionTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 const containerVariants = {
   hidden: {},
@@ -22,6 +22,7 @@ const cardVariants = {
 };
 
 export default function ExperienceSection() {
+  const { experiences, sectionTexts, ui } = useContent();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -44,7 +45,7 @@ export default function ExperienceSection() {
         >
           <span className="section-label flex items-center gap-3 mb-4">
             <span className="w-8 h-px bg-accent-cyan" />
-            Experiência
+            {ui.sections.experience}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.experience.title}
@@ -99,7 +100,7 @@ export default function ExperienceSection() {
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-cyan" />
                       </span>
                       <span className="text-accent-cyan text-xs font-semibold uppercase tracking-wider" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
-                        Posição atual
+                        {ui.currentPosition}
                       </span>
                     </div>
                   )}

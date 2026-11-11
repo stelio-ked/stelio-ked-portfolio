@@ -11,7 +11,7 @@ import {
   LayoutGrid,
   Server,
 } from "lucide-react";
-import { skillCategories, sectionTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 const iconMap: Record<string, React.ElementType> = {
   "bar-chart-3": BarChart3,
@@ -74,6 +74,7 @@ const cardVariants = {
 };
 
 export default function SkillsSection() {
+  const { skillCategories, sectionTexts, ui } = useContent();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -90,7 +91,7 @@ export default function SkillsSection() {
         >
           <span className="section-label flex items-center gap-3 mb-4">
             <span className="w-8 h-px bg-accent-cyan" />
-            Skills
+            {ui.sections.skills}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.skills.title}

@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { Moon, Sun } from "lucide-react";
-import { uiTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 type Theme = "dark" | "light";
 
@@ -38,8 +38,9 @@ function applyTheme(theme: Theme) {
 
 export default function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const { ui } = useContent();
   const next: Theme = theme === "dark" ? "light" : "dark";
-  const label = next === "light" ? uiTexts.themeToLight : uiTexts.themeToDark;
+  const label = next === "light" ? ui.themeToLight : ui.themeToDark;
 
   return (
     <button

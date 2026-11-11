@@ -4,9 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Mail, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { personalInfo, experiences } from "@/lib/data";
-
-const currentCompany = (experiences.find((e) => e.isActive) ?? experiences[0]).company;
+import { useContent } from "@/lib/useContent";
 
 function LinkedInIcon({ size = 14, className = "" }: { size?: number; className?: string }) {
   return (
@@ -19,6 +17,8 @@ function LinkedInIcon({ size = 14, className = "" }: { size?: number; className?
 }
 
 export default function HeroSection() {
+  const { personalInfo, experiences, ui } = useContent();
+  const currentCompany = (experiences.find((e) => e.isActive) ?? experiences[0]).company;
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -149,7 +149,7 @@ export default function HeroSection() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-text-muted text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
-            Scroll
+            {ui.scroll}
           </span>
           <ChevronDown size={18} className="text-text-muted animate-scroll-hint" />
         </motion.div>

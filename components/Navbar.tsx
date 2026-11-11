@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { navLinks, personalInfo } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 import ThemeToggle from "@/components/ThemeToggle";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export default function Navbar() {
+  const { navLinks, personalInfo, ui } = useContent();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -32,7 +34,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navLinks]);
 
   return (
     <motion.nav
@@ -82,22 +84,24 @@ export default function Navbar() {
 
         {/* Tema + CTA Desktop */}
         <div className="hidden md:flex items-center gap-3">
+          <LanguageToggle />
           <ThemeToggle />
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-5 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-accent-cyan to-accent-blue text-white hover:shadow-lg hover:shadow-accent-cyan/20 transition-all duration-300 hover:scale-105"
           >
-            Contato
+            {ui.contact}
           </a>
         </div>
 
         {/* Tema + Mobile Toggle */}
         <div className="md:hidden flex items-center gap-1">
+          <LanguageToggle />
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 text-text-secondary hover:text-text-primary transition-colors"
-            aria-label="Toggle menu"
+            aria-label={ui.toggleMenu}
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -134,7 +138,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="mt-2 px-4 py-3 text-sm font-medium rounded-full bg-gradient-to-r from-accent-cyan to-accent-blue text-white text-center"
               >
-                Contato
+                {ui.contact}
               </a>
             </div>
           </motion.div>

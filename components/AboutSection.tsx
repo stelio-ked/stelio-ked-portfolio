@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Target, Brain, TrendingDown, Compass } from "lucide-react";
-import { aboutText, sectionTexts } from "@/lib/data";
+import { useContent } from "@/lib/useContent";
 
 const iconMap: Record<string, React.ElementType> = {
   target: Target,
@@ -30,6 +30,7 @@ const itemVariants = {
 };
 
 export default function AboutSection() {
+  const { aboutText, sectionTexts } = useContent();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 

@@ -38,7 +38,7 @@ Página única com rolagem. Menu fixo no topo:
 - **Persona:** todas
 - **Objetivo:** ir direto à seção desejada
 - **Como chega:** barra fixa no topo; no celular, botão de menu
-- **O que vê e faz:** links para cada seção, destaque da seção atual conforme a rolagem, botão "Contato" e botão de sol/lua para alternar entre tema escuro e claro (abre no escuro; a escolha fica salva no navegador)
+- **O que vê e faz:** links para cada seção, destaque da seção atual conforme a rolagem, botão "Contato", botão de idioma (PT/EN) e botão de sol/lua para alternar entre tema escuro e claro. O site abre em português e no tema escuro; as duas escolhas ficam salvas no navegador. Ao trocar o idioma, todo o conteúdo muda, sem recarregar nem mudar o endereço
 - **Resultado:** acesso rápido a qualquer parte da página
 - **Experiência:** a barra ganha fundo desfocado ao rolar; o menu móvel abre e fecha ao tocar em um link
 
@@ -99,13 +99,12 @@ Página única com rolagem. Menu fixo no topo:
 
 ### Dados de busca e compartilhamento
 
-- **O que acontece:** o site define título, descrição e palavras-chave para buscadores e prévia de compartilhamento (idioma pt-BR)
+- **O que acontece:** o site define título, descrição e palavras-chave para buscadores e prévia de compartilhamento (sempre em português, mesmo com o site em inglês)
 - **Experiência:** a prévia de compartilhamento tem imagem própria (nome, cargo e frase de posicionamento, no tema do site)
 
 ## Previsto (ainda não existe)
 
 - ⚠ Projetos novos e provas públicas de trabalho em IA aplicada (a definir)
-- ⚠ Versão do site em inglês, com seletor PT/EN (decidido fazer depois do tema)
 - ⚠ Currículo para baixar
 
 ## Pendências com o público-alvo
