@@ -29,8 +29,8 @@ export default function ExperienceSection() {
     <section id="experience" className="relative py-24 sm:py-32">
       {/* Subtle background accent */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#06d6a0]/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8b5cf6]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-cyan/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-violet/20 to-transparent" />
       </div>
 
       <div className="max-w-6xl mx-auto px-6">
@@ -43,13 +43,13 @@ export default function ExperienceSection() {
           className="mb-16"
         >
           <span className="section-label flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#06d6a0]" />
+            <span className="w-8 h-px bg-accent-cyan" />
             Experiência
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.experience.title}
           </h2>
-          <p className="text-[#7a7a9e] mt-3 text-lg">
+          <p className="text-text-secondary mt-3 text-lg">
             {sectionTexts.experience.subtitle}
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export default function ExperienceSection() {
           className="relative"
         >
           {/* Timeline line */}
-          <div className="absolute left-[1.15rem] md:left-1/2 md:-translate-x-px top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#06d6a0]/40 via-[#3b82f6]/30 to-[#8b5cf6]/10" />
+          <div className="absolute left-[1.15rem] md:left-1/2 md:-translate-x-px top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent-cyan/40 via-accent-blue/30 to-accent-violet/10" />
 
           {experiences.map((exp, i) => (
             <motion.div
@@ -75,9 +75,9 @@ export default function ExperienceSection() {
               {/* Timeline dot */}
               <div className="absolute left-[0.65rem] md:left-1/2 md:-translate-x-1/2 top-6 z-10">
                 <div
-                  className={`w-4 h-4 rounded-full border-[3px] border-[#06060e] ${exp.isActive
-                      ? "bg-[#06d6a0] shadow-lg shadow-[#06d6a0]/40"
-                      : "bg-[#3b82f6]/60"
+                  className={`w-4 h-4 rounded-full border-[3px] border-bg-primary ${exp.isActive
+                      ? "bg-accent-cyan shadow-lg shadow-accent-cyan/40"
+                      : "bg-accent-blue/60"
                     }`}
                 />
               </div>
@@ -95,29 +95,29 @@ export default function ExperienceSection() {
                   {exp.isActive && (
                     <div className="flex items-center gap-2 mb-3">
                       <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#06d6a0] opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#06d6a0]" />
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-cyan opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-cyan" />
                       </span>
-                      <span className="text-[#06d6a0] text-xs font-semibold uppercase tracking-wider" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
+                      <span className="text-accent-cyan text-xs font-semibold uppercase tracking-wider" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
                         Posição atual
                       </span>
                     </div>
                   )}
 
                   {/* Header */}
-                  <h3 className="text-lg font-bold text-[#eeeef5] group-hover:text-[#06d6a0] transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-text-primary group-hover:text-accent-cyan transition-colors duration-300">
                     {exp.role}
                   </h3>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 mb-4">
-                    <span className="flex items-center gap-1.5 text-[#a5b4fc] text-sm font-medium">
+                    <span className="flex items-center gap-1.5 text-accent-indigo-soft text-sm font-medium">
                       <Briefcase size={13} />
                       {exp.company}
                     </span>
-                    <span className="text-[#4a4a6a] text-xs" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
+                    <span className="text-text-muted text-xs" style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
                       {exp.period}
                     </span>
                     {exp.location && (
-                      <span className="flex items-center gap-1 text-[#4a4a6a] text-xs">
+                      <span className="flex items-center gap-1 text-text-muted text-xs">
                         <MapPin size={11} />
                         {exp.location}
                       </span>
@@ -129,9 +129,9 @@ export default function ExperienceSection() {
                     {exp.description.map((item, j) => (
                       <li
                         key={j}
-                        className="flex items-start gap-2 text-[#7a7a9e] text-sm leading-relaxed"
+                        className="flex items-start gap-2 text-text-secondary text-sm leading-relaxed"
                       >
-                        <span className="mt-1.5 w-1 h-1 rounded-full bg-[#06d6a0] shrink-0" />
+                        <span className="mt-1.5 w-1 h-1 rounded-full bg-accent-cyan shrink-0" />
                         {item}
                       </li>
                     ))}

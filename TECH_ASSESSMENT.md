@@ -11,6 +11,7 @@
 | Saída | Exportação estática (`output: "export"`, imagens sem otimização) → pasta `out/` |
 | Dados | Arquivo único `lib/data.ts`; sem banco, sem API e sem variáveis de ambiente |
 | Estrutura | Página única (`app/page.tsx`) compõe 9 componentes; seções de conteúdo em `components/` |
+| Tema | Escuro (padrão) e claro por variáveis CSS em `globals.css` (`data-theme` no `<html>`); escolha salva em `localStorage`; script em `layout.tsx` evita piscar. Sem dependência nova |
 | Qualidade | ESLint (`eslint-config-next`); sem testes automatizados |
 | Hospedagem | Vercel (deploy a partir do GitHub); sem `basePath` |
 | Integrações | Nenhuma; contato por `mailto:`, `wa.me` e LinkedIn |

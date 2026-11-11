@@ -25,34 +25,34 @@ const iconMap: Record<string, React.ElementType> = {
 
 const colorMap: Record<string, { accent: string; bg: string; border: string }> = {
   cyan: {
-    accent: "text-[#06d6a0]",
-    bg: "from-[#06d6a0]/15 to-[#06d6a0]/5",
-    border: "group-hover:border-[#06d6a0]/30",
+    accent: "text-accent-cyan",
+    bg: "from-accent-cyan/15 to-accent-cyan/5",
+    border: "group-hover:border-accent-cyan/30",
   },
   indigo: {
-    accent: "text-[#6366f1]",
-    bg: "from-[#6366f1]/15 to-[#6366f1]/5",
-    border: "group-hover:border-[#6366f1]/30",
+    accent: "text-accent-indigo",
+    bg: "from-accent-indigo/15 to-accent-indigo/5",
+    border: "group-hover:border-accent-indigo/30",
   },
   violet: {
-    accent: "text-[#8b5cf6]",
-    bg: "from-[#8b5cf6]/15 to-[#8b5cf6]/5",
-    border: "group-hover:border-[#8b5cf6]/30",
+    accent: "text-accent-violet",
+    bg: "from-accent-violet/15 to-accent-violet/5",
+    border: "group-hover:border-accent-violet/30",
   },
   emerald: {
-    accent: "text-[#10b981]",
-    bg: "from-[#10b981]/15 to-[#10b981]/5",
-    border: "group-hover:border-[#10b981]/30",
+    accent: "text-accent-emerald",
+    bg: "from-accent-emerald/15 to-accent-emerald/5",
+    border: "group-hover:border-accent-emerald/30",
   },
   blue: {
-    accent: "text-[#3b82f6]",
-    bg: "from-[#3b82f6]/15 to-[#3b82f6]/5",
-    border: "group-hover:border-[#3b82f6]/30",
+    accent: "text-accent-blue",
+    bg: "from-accent-blue/15 to-accent-blue/5",
+    border: "group-hover:border-accent-blue/30",
   },
   amber: {
-    accent: "text-[#f59e0b]",
-    bg: "from-[#f59e0b]/15 to-[#f59e0b]/5",
-    border: "group-hover:border-[#f59e0b]/30",
+    accent: "text-accent-amber",
+    bg: "from-accent-amber/15 to-accent-amber/5",
+    border: "group-hover:border-accent-amber/30",
   },
 };
 
@@ -89,13 +89,13 @@ export default function SkillsSection() {
           className="mb-16"
         >
           <span className="section-label flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#06d6a0]" />
+            <span className="w-8 h-px bg-accent-cyan" />
             Skills
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.skills.title}
           </h2>
-          <p className="text-[#7a7a9e] mt-3 text-lg">
+          <p className="text-text-secondary mt-3 text-lg">
             {sectionTexts.skills.subtitle}
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ export default function SkillsSection() {
               <motion.div
                 key={i}
                 variants={cardVariants}
-                className={`glass-card p-6 group transition-all duration-400 cursor-default hover:bg-[#161630]/80 hover:border-white/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 ${colors.border}`}
+                className={`glass-card p-6 group transition-all duration-400 cursor-default hover:bg-bg-card-hover/80 hover:border-fg/10 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20 ${colors.border}`}
               >
                 {/* Icon + Title */}
                 <div className="flex items-center gap-3 mb-5">
@@ -125,7 +125,7 @@ export default function SkillsSection() {
                   >
                     <Icon size={20} className={colors.accent} />
                   </div>
-                  <h3 className="font-bold text-[#eeeef5] text-base">
+                  <h3 className="font-bold text-text-primary text-base">
                     {category.title}
                   </h3>
                 </div>
@@ -135,7 +135,7 @@ export default function SkillsSection() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/[0.04] text-[#7a7a9e] border border-white/[0.06] hover:bg-white/[0.08] hover:text-[#eeeef5] hover:border-white/[0.12] transition-all duration-300 cursor-default"
+                      className="px-3 py-1.5 text-xs font-medium rounded-lg bg-fg/[0.04] text-text-secondary border border-fg/[0.06] hover:bg-fg/[0.08] hover:text-text-primary hover:border-fg/[0.12] transition-all duration-300 cursor-default"
                     >
                       {skill}
                     </span>

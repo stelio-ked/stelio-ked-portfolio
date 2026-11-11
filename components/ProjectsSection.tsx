@@ -38,34 +38,34 @@ const colorMap: Record<
   }
 > = {
   cyan: {
-    accent: "text-[#06d6a0]",
-    bgGlow: "from-[#06d6a0]/15 via-[#3b82f6]/10 to-transparent",
-    border: "group-hover:border-[#06d6a0]/30",
-    badgeBg: "bg-[#06d6a0]/10",
-    badgeText: "text-[#06d6a0]",
-    badgeBorder: "border-[#06d6a0]/20",
-    pingBg: "bg-[#06d6a0]",
-    dotBg: "bg-[#06d6a0]",
+    accent: "text-accent-cyan",
+    bgGlow: "from-accent-cyan/15 via-accent-blue/10 to-transparent",
+    border: "group-hover:border-accent-cyan/30",
+    badgeBg: "bg-accent-cyan/10",
+    badgeText: "text-accent-cyan",
+    badgeBorder: "border-accent-cyan/20",
+    pingBg: "bg-accent-cyan",
+    dotBg: "bg-accent-cyan",
   },
   indigo: {
-    accent: "text-[#6366f1]",
-    bgGlow: "from-[#6366f1]/15 via-[#8b5cf6]/10 to-transparent",
-    border: "group-hover:border-[#6366f1]/30",
-    badgeBg: "bg-[#6366f1]/10",
-    badgeText: "text-[#a5b4fc]",
-    badgeBorder: "border-[#6366f1]/20",
-    pingBg: "bg-[#6366f1]",
-    dotBg: "bg-[#6366f1]",
+    accent: "text-accent-indigo",
+    bgGlow: "from-accent-indigo/15 via-accent-violet/10 to-transparent",
+    border: "group-hover:border-accent-indigo/30",
+    badgeBg: "bg-accent-indigo/10",
+    badgeText: "text-accent-indigo-soft",
+    badgeBorder: "border-accent-indigo/20",
+    pingBg: "bg-accent-indigo",
+    dotBg: "bg-accent-indigo",
   },
   violet: {
-    accent: "text-[#8b5cf6]",
-    bgGlow: "from-[#8b5cf6]/15 via-[#ec4899]/10 to-transparent",
-    border: "group-hover:border-[#8b5cf6]/30",
-    badgeBg: "bg-[#8b5cf6]/10",
-    badgeText: "text-[#c4b5fd]",
-    badgeBorder: "border-[#8b5cf6]/20",
-    pingBg: "bg-[#8b5cf6]",
-    dotBg: "bg-[#8b5cf6]",
+    accent: "text-accent-violet",
+    bgGlow: "from-accent-violet/15 via-accent-pink/10 to-transparent",
+    border: "group-hover:border-accent-violet/30",
+    badgeBg: "bg-accent-violet/10",
+    badgeText: "text-accent-violet-soft",
+    badgeBorder: "border-accent-violet/20",
+    pingBg: "bg-accent-violet",
+    dotBg: "bg-accent-violet",
   },
 };
 
@@ -92,7 +92,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="relative py-24 sm:py-32">
       {/* Subtle background divider accents */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#06d6a0]/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-cyan/20 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
@@ -104,13 +104,13 @@ export default function ProjectsSection() {
           className="mb-16"
         >
           <span className="section-label flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-[#06d6a0]" />
+            <span className="w-8 h-px bg-accent-cyan" />
             Projetos
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5]">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
             {sectionTexts.projects.title}
           </h2>
-          <p className="text-[#7a7a9e] mt-3 text-lg">
+          <p className="text-text-secondary mt-3 text-lg">
             {sectionTexts.projects.subtitle}
           </p>
         </motion.div>
@@ -130,7 +130,7 @@ export default function ProjectsSection() {
               <motion.div
                 key={project.id}
                 variants={cardVariants}
-                className={`glass-card p-6 sm:p-8 group relative overflow-hidden transition-all duration-400 hover:bg-[#161630]/80 hover:shadow-2xl hover:shadow-black/30 hover:-translate-y-1 ${colors.border}`}
+                className={`glass-card p-6 sm:p-8 group relative overflow-hidden transition-all duration-400 hover:bg-bg-card-hover/80 hover:shadow-2xl hover:shadow-black/30 hover:-translate-y-1 ${colors.border}`}
               >
                 {/* Ambient glow accent behind card */}
                 <div
@@ -141,7 +141,7 @@ export default function ProjectsSection() {
                   <div>
                     {/* Top Row: Icon/Category + Badge */}
                     <div className="flex items-center justify-between gap-4 mb-4">
-                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#a5b4fc]">
+                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent-indigo-soft">
                         <Rocket size={16} className={colors.accent} />
                         <span style={{ fontFamily: "var(--font-geist-mono), monospace" }}>
                           {project.category}
@@ -169,16 +169,16 @@ export default function ProjectsSection() {
 
                     {/* Project Title & Tagline */}
                     <div className="mb-4">
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#eeeef5] group-hover:text-[#06d6a0] transition-colors duration-300">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-text-primary group-hover:text-accent-cyan transition-colors duration-300">
                         {project.name}
                       </h3>
-                      <p className="text-[#a5b4fc] text-base sm:text-lg font-medium mt-1">
+                      <p className="text-accent-indigo-soft text-base sm:text-lg font-medium mt-1">
                         {project.tagline}
                       </p>
                     </div>
 
                     {/* Description */}
-                    <p className="text-[#7a7a9e] text-sm sm:text-base leading-relaxed mb-6">
+                    <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-6">
                       {project.description}
                     </p>
 
@@ -187,7 +187,7 @@ export default function ProjectsSection() {
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/[0.04] text-[#a5b4fc] border border-white/[0.08] hover:bg-white/[0.08] hover:text-[#eeeef5] hover:border-[#6366f1]/30 transition-all duration-300 cursor-default"
+                          className="px-3 py-1.5 text-xs font-medium rounded-lg bg-fg/[0.04] text-accent-indigo-soft border border-fg/[0.08] hover:bg-fg/[0.08] hover:text-text-primary hover:border-accent-indigo/30 transition-all duration-300 cursor-default"
                         >
                           {tech}
                         </span>
@@ -196,13 +196,13 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Actions Row */}
-                  <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-white/[0.06]">
+                  <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-fg/[0.06]">
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#06d6a0] to-[#3b82f6] text-white font-medium text-sm shadow-lg shadow-[#06d6a0]/20 hover:shadow-[#06d6a0]/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-accent-cyan to-accent-blue text-white font-medium text-sm shadow-lg shadow-accent-cyan/20 hover:shadow-accent-cyan/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                       >
                         <ExternalLink size={16} />
                         Ver ao vivo
@@ -214,7 +214,7 @@ export default function ProjectsSection() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#eeeef5] font-medium text-sm hover:bg-white/[0.08] hover:border-[#6366f1]/40 hover:text-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-fg/[0.04] border border-fg/[0.08] text-text-primary font-medium text-sm hover:bg-fg/[0.08] hover:border-accent-indigo/40 hover:text-fg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                       >
                         <GithubIcon size={16} />
                         GitHub

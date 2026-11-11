@@ -335,6 +335,12 @@ export const sectionTexts = {
   },
 };
 
+// Textos de interface (rótulos de acessibilidade dos controles)
+export const uiTexts = {
+  themeToLight: "Mudar para o tema claro",
+  themeToDark: "Mudar para o tema escuro",
+};
+
 export const navLinks = [
   { label: "Sobre", href: "#about" },
   { label: "Experiência", href: "#experience" },

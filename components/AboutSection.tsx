@@ -45,10 +45,10 @@ export default function AboutSection() {
           {/* Section label */}
           <motion.div variants={itemVariants} className="mb-12">
             <span className="section-label flex items-center gap-3 mb-4">
-              <span className="w-8 h-px bg-[#06d6a0]" />
+              <span className="w-8 h-px bg-accent-cyan" />
               {aboutText.headline}
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#eeeef5] max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text-primary max-w-2xl">
               {sectionTexts.about.title}{" "}
               <span className="gradient-text">{sectionTexts.about.highlight}</span>
             </h2>
@@ -60,14 +60,14 @@ export default function AboutSection() {
             <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
               <div className="space-y-4">
                 {aboutText.paragraphs.map((p, i) => (
-                  <p key={i} className="text-[#7a7a9e] text-lg leading-relaxed">
+                  <p key={i} className="text-text-secondary text-lg leading-relaxed">
                     {p}
                   </p>
                 ))}
               </div>
               <div className="pt-2 flex flex-wrap gap-2">
                 {aboutText.tags.map((tag, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-[#06d6a0]/10 border border-[#06d6a0]/20 text-[#06d6a0] text-xs font-semibold rounded-full hover:bg-[#06d6a0]/20 transition-colors cursor-default">
+                  <span key={i} className="px-3 py-1.5 bg-accent-cyan/10 border border-accent-cyan/20 text-accent-cyan text-xs font-semibold rounded-full hover:bg-accent-cyan/20 transition-colors cursor-default">
                     {tag}
                   </span>
                 ))}
@@ -84,7 +84,7 @@ export default function AboutSection() {
                   <div className="text-3xl sm:text-4xl font-extrabold gradient-text mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-[#7a7a9e] text-sm font-medium">
+                  <div className="text-text-secondary text-sm font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -105,13 +105,13 @@ export default function AboutSection() {
                   variants={itemVariants}
                   className="glass-card glass-card-hover p-6 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#06d6a0]/20 to-[#3b82f6]/10 flex items-center justify-center mb-4 group-hover:from-[#06d6a0]/30 group-hover:to-[#3b82f6]/20 transition-all duration-300">
-                    <Icon size={20} className="text-[#06d6a0]" />
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-cyan/20 to-accent-blue/10 flex items-center justify-center mb-4 group-hover:from-accent-cyan/30 group-hover:to-accent-blue/20 transition-all duration-300">
+                    <Icon size={20} className="text-accent-cyan" />
                   </div>
-                  <h3 className="text-[#eeeef5] font-semibold mb-2 text-sm">
+                  <h3 className="text-text-primary font-semibold mb-2 text-sm">
                     {highlight.title}
                   </h3>
-                  <p className="text-[#7a7a9e] text-sm leading-relaxed">
+                  <p className="text-text-secondary text-sm leading-relaxed">
                     {highlight.text}
                   </p>
                 </motion.div>
