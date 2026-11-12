@@ -50,5 +50,5 @@ Manter a arquitetura atual (Next.js estático com conteúdo em `lib/data.ts`), q
 - [x] Correções 1 e 2 acima (aplicadas em 2026-11-10)
 - [x] Revisão de conteúdo e metadados (item 3, aplicada em 2026-11-10)
 - [x] Competências de IA e .NET listadas de forma genérica, sem clientes (confirmado pelo dono em 2026-11-10)
-- [x] Hospedagem: Vercel (https://portfolio-stelio-keds-projects.vercel.app/), código em https://github.com/stelio-ked/stelio-ked-portfolio. Sem `basePath` (domínio na raiz)
+- [x] Hospedagem: Vercel (https://stelio-ked.vercel.app/), código em https://github.com/stelio-ked/stelio-ked-portfolio. Sem `basePath` (domínio na raiz)
 - [x] E-mail e WhatsApp permanecem públicos (decisão do dono, 2026-11-10)
