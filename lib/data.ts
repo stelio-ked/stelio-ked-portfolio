@@ -20,6 +20,7 @@ export interface PersonalInfo {
   whatsappDisplay: string;
   linkedin: string;
   avatarUrl: string;
+  aboutPhotoUrl: string;
 }
 
 export interface Experience {
@@ -84,6 +85,8 @@ export interface UiTexts {
   seeAllLinkedIn: string;
   sendEmail: string;
   madeWith: string;
+  viewExperience: string;
+  talkToMe: string;
 }
 
 export interface SiteContent {
@@ -130,7 +133,8 @@ const pt: SiteContent = {
     whatsapp: "5548988076962",
     whatsappDisplay: "+55 48 98807-6962",
     linkedin: "https://www.linkedin.com/in/stelio-ked/",
-    avatarUrl: "/images/avatar-final.webp",
+    avatarUrl: "/images/stelio-hero.webp",
+    aboutPhotoUrl: "/images/stelio-sobre.webp",
   },
 
   certifications: {
@@ -439,6 +443,8 @@ const pt: SiteContent = {
     seeAllLinkedIn: "Ver todas no LinkedIn",
     sendEmail: "Enviar Email",
     madeWith: "Feito com",
+    viewExperience: "Ver experiência",
+    talkToMe: "Falar comigo",
   },
 };
 
@@ -705,6 +711,8 @@ const en: SiteContent = {
     seeAllLinkedIn: "See all on LinkedIn",
     sendEmail: "Send Email",
     madeWith: "Made with",
+    viewExperience: "View experience",
+    talkToMe: "Talk to me",
   },
 };
 
