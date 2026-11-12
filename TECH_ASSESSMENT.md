@@ -14,7 +14,7 @@
 | Estrutura | Página única (`app/page.tsx`) compõe 9 componentes; seções de conteúdo em `components/` |
 | Tema | Escuro (padrão) e claro por variáveis CSS em `globals.css` (`data-theme` no `<html>`); escolha salva em `localStorage`; script em `layout.tsx` evita piscar. Sem dependência nova |
 | Qualidade | ESLint (`eslint-config-next`); sem testes automatizados |
-| Hospedagem | Vercel (deploy a partir do GitHub); sem `basePath` |
+| Hospedagem | Vercel (deploy a partir do GitHub); sem `basePath`; `vercel.json` fixa o `Content-Type: image/png` da imagem de prévia |
 | Integrações | Nenhuma; contato por `mailto:`, `wa.me` e LinkedIn |
 
 ## Decisões que o código revela
