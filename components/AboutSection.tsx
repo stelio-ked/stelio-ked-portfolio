@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { Target, Brain, TrendingDown, Compass } from "lucide-react";
 import { useContent } from "@/lib/useContent";
 
@@ -30,7 +31,7 @@ const itemVariants = {
 };
 
 export default function AboutSection() {
-  const { aboutText, sectionTexts } = useContent();
+  const { aboutText, sectionTexts, personalInfo } = useContent();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -56,7 +57,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* Content grid */}
-          <div className="grid lg:grid-cols-5 gap-12 mb-16">
+          <div className="grid lg:grid-cols-5 gap-12 mb-12">
             {/* Text and Tags */}
             <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
               <div className="space-y-4">
@@ -75,23 +76,36 @@ export default function AboutSection() {
               </div>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div variants={itemVariants} className="lg:col-span-2 grid grid-cols-3 lg:grid-cols-1 gap-4">
-              {aboutText.stats.map((stat, i) => (
-                <div
-                  key={i}
-                  className="glass-card glass-card-hover p-5 text-center lg:text-left"
-                >
-                  <div className="text-3xl sm:text-4xl font-extrabold gradient-text mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-text-secondary text-sm font-medium">
-                    {stat.label}
-                  </div>
+            {/* Foto */}
+            <motion.div variants={itemVariants} className="lg:col-span-2 flex justify-center lg:justify-end">
+              <div className="relative group w-full max-w-[300px] sm:max-w-[340px]">
+                <div className="absolute -inset-3 bg-gradient-to-br from-accent-cyan via-accent-blue to-accent-violet rounded-[2rem] opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500" />
+                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-card border border-fg/10">
+                  <Image
+                    src={personalInfo.aboutPhotoUrl}
+                    alt={personalInfo.name}
+                    fill
+                    sizes="(min-width: 640px) 340px, 300px"
+                    className="object-cover object-top"
+                  />
                 </div>
-              ))}
+              </div>
             </motion.div>
           </div>
+
+          {/* Stats */}
+          <motion.div variants={itemVariants} className="grid grid-cols-3 gap-4 mb-16">
+            {aboutText.stats.map((stat, i) => (
+              <div key={i} className="glass-card glass-card-hover p-5 text-center sm:text-left">
+                <div className="text-3xl sm:text-4xl font-extrabold gradient-text mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-text-secondary text-sm font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </motion.div>
 
           {/* Highlights grid */}
           <motion.div

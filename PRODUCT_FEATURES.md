@@ -29,9 +29,9 @@ Página única com rolagem. Menu fixo no topo:
 - **Persona:** todas
 - **Objetivo:** entender em segundos quem é Stelio Ked e o que faz
 - **Como chega:** ao abrir o site
-- **O que vê e faz:** foto, saudação, nome, cargo atual e empresa, frase de posicionamento, localização, links de e-mail e LinkedIn, indicador para rolar a página
+- **O que vê e faz:** foto em destaque, saudação, nome, cargo atual e empresa, frase de posicionamento, botões "Falar comigo" (leva ao contato) e "Ver experiência", localização, links de e-mail e LinkedIn, indicador para rolar a página
 - **Resultado:** primeira impressão e atalhos de contato imediatos
-- **Experiência:** animações de entrada; o bloco desaparece suavemente ao rolar
+- **Experiência:** texto à esquerda e foto num cartão com brilho à direita; no celular, a foto vem primeiro, com o texto centralizado abaixo. Animações de entrada; o bloco desaparece suavemente ao rolar
 
 ### Menu de navegação
 
@@ -47,7 +47,7 @@ Página única com rolagem. Menu fixo no topo:
 - **Persona:** recrutador(a), gestor(a)
 - **Objetivo:** conhecer o perfil profissional
 - **Como chega:** menu "Sobre"
-- **O que vê e faz:** textos de apresentação, números de destaque (anos de experiência, empresas, certificações), cartões de destaques profissionais e etiquetas de temas
+- **O que vê e faz:** textos de apresentação, foto num cartão ao lado do texto, números de destaque (anos de experiência, empresas, certificações) em uma linha, cartões de destaques profissionais e etiquetas de temas
 - **Resultado:** visão geral do perfil e dos diferenciais
 
 ### Experiência
@@ -100,7 +100,7 @@ Página única com rolagem. Menu fixo no topo:
 ### Dados de busca e compartilhamento
 
 - **O que acontece:** o site define título, descrição e palavras-chave para buscadores e prévia de compartilhamento (sempre em português, mesmo com o site em inglês)
-- **Experiência:** a prévia de compartilhamento tem imagem própria (nome, cargo e frase de posicionamento, no tema do site)
+- **Experiência:** a prévia de compartilhamento tem imagem própria (foto, nome, cargo e frase de posicionamento, no tema do site)
 
 ## Previsto (ainda não existe)
 

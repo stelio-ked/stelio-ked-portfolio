@@ -64,4 +64,5 @@ CLAUDE.local.md
 .ai-agent/policy/*.local.txt
 # Temporários do agente
 .ai-agent/work/tmp/
+# Capturas e logs do navegador de teste (podem conter dados pessoais)
 .playwright-mcp/
