@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-stelio-keds-projects.vercel.app"),
+  metadataBase: new URL("https://portfolio-stelio-ked.vercel.app"),
   title: `${personalInfo.name} — ${personalInfo.subtitle}`,
   description: personalInfo.shareDescription,
   keywords: [
