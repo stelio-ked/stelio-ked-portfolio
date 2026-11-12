@@ -35,17 +35,17 @@ export default async function Image() {
             width: 120,
             height: 6,
             borderRadius: 3,
-            marginBottom: 36,
+            marginBottom: 30,
             background: "linear-gradient(90deg, #06d6a0, #3b82f6, #8b5cf6)",
           }}
         />
-        <div style={{ fontSize: 88, fontWeight: 800, letterSpacing: -2 }}>
+        <div style={{ fontSize: 116, fontWeight: 800, letterSpacing: -3 }}>
           {personalInfo.name}
         </div>
-        <div style={{ fontSize: 40, color: "#06d6a0", marginTop: 16, maxWidth: 620 }}>
+        <div style={{ fontSize: 44, color: "#06d6a0", marginTop: 14, maxWidth: 680 }}>
           {personalInfo.subtitle}
         </div>
-        <div style={{ fontSize: 28, color: "#7a7a9e", marginTop: 28, maxWidth: 620 }}>
+        <div style={{ fontSize: 34, color: "#8a8aae", marginTop: 26, maxWidth: 620 }}>
           {personalInfo.tagline}
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
